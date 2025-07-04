@@ -12,11 +12,11 @@ S1AP_MESSAGE_TYPES = {
     0x40: "UnsuccessfulOutcome"
 }
 
-# S1AP Procedure Codes (3GPP TS 36.413)
+# S1AP Procedure Codes (3GPP TS 36.413 V18.3.0)
 S1AP_PROCEDURES = {
     0: "HandoverPreparation",
-    1: "HandoverResourceAllocation", 
-    2: "HandoverNotification",
+    1: "HandoverResourceAllocation",
+    2: "HandoverNotification", 
     3: "PathSwitchRequest",
     4: "HandoverCancel",
     5: "E-RABSetup",
@@ -65,15 +65,22 @@ S1AP_PROCEDURES = {
     48: "UERadioCapabilityMatch",
     49: "PWSRestartIndication",
     50: "E-RABModificationIndication",
-    51: "E-RABModificationConfirm",
-    52: "UEContextModificationIndication",
-    53: "UEContextModificationConfirm",
-    54: "UEContextSuspend",
-    55: "UEContextResume",
-    56: "ConnectionEstablishmentIndication",
-    57: "UEContextReleaseComplete",
-    58: "HandoverSuccess",
-    59: "HandoverFailure"
+    51: "PWSFailureIndication",
+    52: "RerouteNASRequest",
+    53: "UEContextModificationIndication",
+    54: "ConnectionEstablishmentIndication",
+    55: "UEContextSuspend",
+    56: "UEContextResume",
+    57: "NASDeliveryIndication",
+    58: "RetrieveUEInformation",
+    59: "UEInformationTransfer",
+    60: "eNBCPRelocationIndication",
+    61: "MMECPRelocationIndication",
+    62: "SecondaryRATDataUsageReport",
+    63: "UERadioCapabilityIDMapping",
+    64: "HandoverSuccess",
+    65: "eNBEarlyStatusTransfer",
+    66: "MMEEarlyStatusTransfer"
 }
 
 # Criticality Values
