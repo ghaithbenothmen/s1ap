@@ -52,27 +52,52 @@ class InformationElementAnalyzer:
             return {"error": f"Analysis failed: {e}", "raw_value": value_data.hex()}
     
     def _analyze_integer(self, ie_def: Dict[str, Any], data: bytes) -> Dict[str, Any]:
-        """Analyze INTEGER type IE"""
+        """Analyze INTEGER type IE with proper ASN.1/PER decoding"""
         if not data:
             return {"value": 0}
             
         try:
-            # Handle different integer sizes
-            if len(data) == 1:
-                value = data[0]
-            elif len(data) == 2:
-                value = struct.unpack('>H', data)[0]
-            elif len(data) == 4:
-                value = struct.unpack('>L', data)[0]
-            elif len(data) == 8:
-                value = struct.unpack('>Q', data)[0]
-            else:
-                # Variable length integer
-                value = 0
-                for byte in data:
-                    value = (value << 8) | byte
+            ie_name = ie_def.get("name", "")
             
-            result = {"value": value, "length": len(data)}
+            # Special handling for S1AP session identifiers
+            if ie_name == "MME-UE-S1AP-ID":
+                if len(data) == 5:
+                    # Skip first byte (PER length indicator), decode next 4 bytes
+                    value = struct.unpack('>I', data[1:])[0]
+                    result = {
+                        "value": value, 
+                        "length": len(data),
+                        "per_encoding": "length_indicator_skipped",
+                        "decoded_bytes": data[1:].hex()
+                    }
+                else:
+                    # Fallback to standard decoding
+                    value = self._decode_standard_integer(data)
+                    result = {"value": value, "length": len(data)}
+                    
+            elif ie_name == "eNB-UE-S1AP-ID":
+                if len(data) == 4:
+                    # Handle MSB masking for PER encoding
+                    first_byte = data[0] & 0x7F  # Clear MSB
+                    value = first_byte
+                    for byte in data[1:]:
+                        value = (value << 8) | byte
+                    result = {
+                        "value": value,
+                        "length": len(data), 
+                        "per_encoding": "msb_masked",
+                        "original_first_byte": f"0x{data[0]:02x}",
+                        "masked_first_byte": f"0x{first_byte:02x}"
+                    }
+                else:
+                    # Fallback to standard decoding
+                    value = self._decode_standard_integer(data)
+                    result = {"value": value, "length": len(data)}
+                    
+            else:
+                # Standard integer decoding for other IEs
+                value = self._decode_standard_integer(data)
+                result = {"value": value, "length": len(data)}
             
             # Check if value is in valid range
             if "range" in ie_def:
@@ -80,13 +105,13 @@ class InformationElementAnalyzer:
                 result["in_range"] = min_val <= value <= max_val
             
             # Add specialized analysis for specific IEs
-            if ie_def["name"] == "MME-UE-S1AP-ID":
+            if ie_name == "MME-UE-S1AP-ID":
                 result["session_tracking"] = {
                     "mme_ue_s1ap_id": value,
                     "session_management": True,
                     "tracking_capability": "high"
                 }
-            elif ie_def["name"] == "eNB-UE-S1AP-ID":
+            elif ie_name == "eNB-UE-S1AP-ID":
                 result["session_tracking"] = {
                     "enb_ue_s1ap_id": value,
                     "session_management": True,
@@ -97,6 +122,23 @@ class InformationElementAnalyzer:
             
         except Exception as e:
             return {"error": f"Integer analysis failed: {e}"}
+    
+    def _decode_standard_integer(self, data: bytes) -> int:
+        """Standard integer decoding for generic IEs"""
+        if len(data) == 1:
+            return data[0]
+        elif len(data) == 2:
+            return struct.unpack('>H', data)[0]
+        elif len(data) == 4:
+            return struct.unpack('>I', data)[0]
+        elif len(data) == 8:
+            return struct.unpack('>Q', data)[0]
+        else:
+            # Variable length integer - big endian
+            value = 0
+            for byte in data:
+                value = (value << 8) | byte
+            return value
     
     def _analyze_enumerated(self, ie_def: Dict[str, Any], data: bytes) -> Dict[str, Any]:
         """Analyze ENUMERATED type IE"""
