@@ -198,17 +198,17 @@ class S1APDecoder:
                 # Standard 3-byte container: [00 00 count]
                 ie_count = ie_data[2]
                 pos = 3
-                print(f"[DEBUG] Found IE container with {ie_count} IEs")
+                # print(f"[DEBUG] Found IE container with {ie_count} IEs")
             elif len(ie_data) >= 4 and ie_data[0:3] == b'\x00\x00\x00':
                 # 4-byte container: [00 00 00 count]  
                 ie_count = ie_data[3]
                 pos = 4
-                print(f"[DEBUG] Found 4-byte IE container with {ie_count} IEs")
+                # print(f"[DEBUG] Found 4-byte IE container with {ie_count} IEs")
             else:
                 # Direct IE data or other format
                 ie_count = 5  # Estimate
                 pos = 0
-                print(f"[DEBUG] Direct IE parsing, estimating {ie_count} IEs")
+                # print(f"[DEBUG] Direct IE parsing, estimating {ie_count} IEs")
             
             # Parse individual IEs
             parsed_count = 0
