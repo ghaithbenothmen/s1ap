@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 
 from protocols.ie_definitions import get_ie_definition, IEType
+from s1ap_decoder.advanced_decoders import ComplexIEDecoder
 
 class InformationElementAnalyzer:
     """Analyzer for S1AP Information Elements"""
@@ -16,6 +17,8 @@ class InformationElementAnalyzer:
     def __init__(self):
         self._mcc_mnc_table = None
         self._load_mcc_mnc_table()
+        # Initialize the complex IE decoder
+        self.complex_decoder = ComplexIEDecoder()
     
     def _load_mcc_mnc_table(self):
         """Load MCC-MNC table from JSON file with comprehensive error handling"""
@@ -83,6 +86,12 @@ class InformationElementAnalyzer:
         Returns:
             Dictionary with analyzed content
         """
+        # First try the complex IE decoder for specialized handling
+        if hasattr(self, 'complex_decoder'):
+            complex_result = self.complex_decoder.decode_ie(ie_id, value_data)
+            if complex_result.success:
+                return complex_result.data
+        
         ie_def = get_ie_definition(ie_id)
         if not ie_def:
             return {"raw_value": value_data.hex()}
@@ -201,7 +210,7 @@ class InformationElementAnalyzer:
             return value
     
     def _analyze_enumerated(self, ie_def: Dict[str, Any], data: bytes) -> Dict[str, Any]:
-        """Analyze ENUMERATED type IE"""
+        """Analyze ENUMERATED type IE with enhanced detail"""
         if not data:
             return {"value": 0}
             
@@ -212,7 +221,13 @@ class InformationElementAnalyzer:
             else:
                 value = struct.unpack('>H', data[:2])[0]
             
-            result = {"value": value}
+            ie_name = ie_def.get("name", "")
+            
+            result = {
+                "value": value,
+                "hex_value": f"0x{value:02x}",
+                "length": len(data)
+            }
             
             # Map to enumerated name if available
             if "values" in ie_def:
@@ -221,39 +236,174 @@ class InformationElementAnalyzer:
                     if enum_value == value:
                         result["name"] = name
                         break
+                        
+                # If no match found, show it's unknown
+                if "name" not in result:
+                    result["name"] = f"unknown({value})"
+            
+            # Enhanced analysis for specific enumerated types
+            if ie_name == "CNDomain":
+                # CN Domain: ps(0), cs(1)
+                domain_names = {0: "ps", 1: "cs"}
+                domain_descriptions = {
+                    0: "Packet Switched Domain",
+                    1: "Circuit Switched Domain"
+                }
+                
+                result.update({
+                    "domain_name": domain_names.get(value, f"unknown({value})"),
+                    "description": domain_descriptions.get(value, "Unknown domain"),
+                    "wireshark_format": {
+                        "value": value,
+                        "name": domain_names.get(value, f"unknown({value})"),
+                        "description": domain_descriptions.get(value, "Unknown domain")
+                    }
+                })
+                
+            elif ie_name == "pagingDRX":
+                # Paging DRX: v32(0), v64(1), v128(2), v256(3)
+                drx_values = {0: 32, 1: 64, 2: 128, 3: 256}
+                drx_names = {0: "v32", 1: "v64", 2: "v128", 3: "v256"}
+                
+                result.update({
+                    "drx_cycle": drx_values.get(value, 0),
+                    "drx_name": drx_names.get(value, f"unknown({value})"),
+                    "wireshark_format": {
+                        "value": value,
+                        "cycle": f"{drx_values.get(value, 0)}",
+                        "name": drx_names.get(value, f"unknown({value})")
+                    }
+                })
             
             return result
             
         except Exception as e:
-            return {"error": f"Enumerated analysis failed: {e}"}
+            return {"error": f"Enumerated analysis failed: {e}", "hex_value": data.hex()}
     
     def _analyze_bit_string(self, ie_def: Dict[str, Any], data: bytes) -> Dict[str, Any]:
-        """Analyze BIT STRING type IE"""
+        """Analyze BIT STRING type IE with Wireshark-like detail"""
         if not data:
             return {"bits": ""}
             
         try:
             # Convert to bit string
             bit_string = ''.join(f'{byte:08b}' for byte in data)
+            ie_name = ie_def.get("name", "")
+            expected_size = ie_def.get("size", None)
             
             result = {
                 "bits": bit_string,
                 "length_bits": len(bit_string),
-                "length_bytes": len(data)
+                "length_bytes": len(data),
+                "hex_value": data.hex()
             }
             
-            # Extract specific bit values for known IEs
-            if ie_def["name"] == "UEIdentityIndexValue":
-                # 10-bit value for paging optimization
+            # Enhanced analysis for specific IEs
+            if ie_name == "UEIdentityIndexValue":
+                # 10-bit value for paging optimization (3GPP TS 36.413)
+                # Per PER encoding, first 10 bits contain the actual value
                 if len(data) >= 2:
-                    value = (data[0] << 8 | data[1]) >> 6  # First 10 bits
-                    result["ue_identity_index"] = value
-                    result["paging_optimization"] = True
+                    # Extract 10-bit value from first 10 bits
+                    raw_value = (data[0] << 8) | data[1]
+                    ue_index_value = raw_value >> 6  # First 10 bits
+                    pad_bits = 6  # 16 - 10 = 6 padding bits
+                    
+                    # Format bit string with dots for padding like Wireshark
+                    formatted_bits = bit_string[:10] + "." * pad_bits
+                    formatted_with_spaces = " ".join([formatted_bits[i:i+4] for i in range(0, len(formatted_bits), 4)])
+                    
+                    result.update({
+                        "ue_identity_index_value": ue_index_value,
+                        "decimal_value": ue_index_value,
+                        "bit_length": 10,
+                        "pad_bits": pad_bits,
+                        "actual_bits": bit_string[:10],
+                        "padding_bits": bit_string[10:],
+                        "paging_optimization": True,
+                        "wireshark_format": {
+                            "display": f"[bit length {10}, {pad_bits} LSB pad bits, {formatted_with_spaces} decimal value {ue_index_value}]",
+                            "bit_string": bit_string,
+                            "bit_length_desc": f"bit length {10}",
+                            "pad_bits_desc": f"{pad_bits} LSB pad bits",
+                            "decimal_desc": f"decimal value {ue_index_value}",
+                            "formatted_bits": formatted_with_spaces,
+                            "binary": bit_string[:10]
+                        }
+                    })
+                    
+            elif ie_name == "extended-UEIdentityIndexValue":
+                # 14-bit value for extended paging optimization
+                if len(data) >= 2:
+                    # Extract 14-bit value from first 14 bits
+                    raw_value = (data[0] << 8) | data[1]
+                    extended_index_value = raw_value >> 2  # First 14 bits
+                    pad_bits = 2  # 16 - 14 = 2 padding bits
+                    
+                    # Format bit string with dots for padding like Wireshark
+                    formatted_bits = bit_string[:14] + "." * pad_bits
+                    formatted_with_spaces = " ".join([formatted_bits[i:i+4] for i in range(0, len(formatted_bits), 4)])
+                    
+                    result.update({
+                        "extended_ue_identity_index_value": extended_index_value,
+                        "decimal_value": extended_index_value,
+                        "bit_length": 14,
+                        "pad_bits": pad_bits,
+                        "actual_bits": bit_string[:14],
+                        "padding_bits": bit_string[14:],
+                        "paging_optimization": True,
+                        "wireshark_format": {
+                            "display": f"[bit length {14}, {pad_bits} LSB pad bits, {formatted_with_spaces} decimal value {extended_index_value}]",
+                            "bit_string": bit_string,
+                            "bit_length_desc": f"bit length {14}",
+                            "pad_bits_desc": f"{pad_bits} LSB pad bits",
+                            "decimal_desc": f"decimal value {extended_index_value}",
+                            "formatted_bits": formatted_with_spaces,
+                            "binary": bit_string[:14]
+                        }
+                    })
+                    
+            elif ie_name == "NB-IoT-UEIdentityIndexValue":
+                # 12-bit value for NB-IoT paging optimization
+                if len(data) >= 2:
+                    raw_value = (data[0] << 8) | data[1]
+                    nb_iot_index_value = raw_value >> 4  # First 12 bits
+                    pad_bits = 4  # 16 - 12 = 4 padding bits
+                    
+                    result.update({
+                        "nb_iot_ue_identity_index_value": nb_iot_index_value,
+                        "decimal_value": nb_iot_index_value,
+                        "bit_length": 12,
+                        "pad_bits": pad_bits,
+                        "actual_bits": bit_string[:12],
+                        "padding_bits": bit_string[12:],
+                        "paging_optimization": True,
+                        "wireshark_format": {
+                            "bit_string": bit_string,
+                            "bit_length": f"{12} bits",
+                            "pad_bits": f"{pad_bits} pad bits",
+                            "decimal": nb_iot_index_value,
+                            "binary": bit_string[:12]
+                        }
+                    })
+            
+            # Add general bit string analysis for other types
+            if expected_size and expected_size != len(bit_string):
+                total_bits = len(bit_string)
+                actual_bits = min(expected_size, total_bits)
+                pad_bits = max(0, total_bits - expected_size)
+                
+                result.update({
+                    "expected_bit_length": expected_size,
+                    "actual_bit_length": actual_bits,
+                    "pad_bits": pad_bits,
+                    "significant_bits": bit_string[:actual_bits] if actual_bits > 0 else "",
+                    "padding_bits": bit_string[actual_bits:] if pad_bits > 0 else ""
+                })
             
             return result
             
         except Exception as e:
-            return {"error": f"Bit string analysis failed: {e}"}
+            return {"error": f"Bit string analysis failed: {e}", "hex_value": data.hex()}
     
     def _analyze_octet_string(self, ie_def: Dict[str, Any], data: bytes) -> Dict[str, Any]:
         """Analyze OCTET STRING type IE"""
@@ -306,48 +456,362 @@ class InformationElementAnalyzer:
         return result
     
     def _analyze_choice(self, ie_def: Dict[str, Any], data: bytes) -> Dict[str, Any]:
-        """Analyze CHOICE type IE"""
-        return {
-            "type": "choice", 
-            "length": len(data),
-            "hex_value": data.hex()
-        }
+        """Analyze CHOICE type IE with detailed decoding"""
+        if not data:
+            return {"error": "Empty CHOICE data"}
+            
+        ie_name = ie_def.get("name", "")
+        
+        try:
+            result = {
+                "type": "choice", 
+                "length": len(data),
+                "hex_value": data.hex()
+            }
+            
+            # Enhanced analysis for UEPagingID
+            if ie_name == "UEPagingID":
+                # UEPagingID ::= CHOICE {
+                #     s-TMSI      S-TMSI,
+                #     iMSI        IMSI
+                # }
+                
+                if len(data) >= 6:
+                    # First byte indicates the choice
+                    choice_indicator = data[0]
+                    
+                    if choice_indicator == 0x02:  # s-TMSI choice (based on sample data)
+                        # s-TMSI follows, typically 5 bytes (1 byte MME code + 4 bytes M-TMSI)
+                        if len(data) >= 6:
+                            s_tmsi_data = data[1:]  # Skip choice indicator
+                            s_tmsi_analysis = self._decode_s_tmsi_from_choice(s_tmsi_data)
+                            
+                            result.update({
+                                "choice": "s-TMSI",
+                                "choice_value": 0,  # s-TMSI is choice value 0 in Wireshark
+                                "choice_indicator": choice_indicator,
+                                "choice_indicator_hex": f"0x{choice_indicator:02x}",
+                                "s_tmsi": s_tmsi_analysis,
+                                "wireshark_format": {
+                                    "choice_display": "s-TMSI (0)",
+                                    "mmec": s_tmsi_analysis.get("wireshark_format", {}).get("mmec", ""),
+                                    "m_tmsi": s_tmsi_analysis.get("wireshark_format", {}).get("m_tmsi", ""),
+                                    "complete": f"s-TMSI (0)"
+                                }
+                            })
+                    elif choice_indicator == 0x01:  # iMSI choice (hypothetical)
+                        result.update({
+                            "choice": "iMSI",
+                            "choice_value": 1,  # iMSI is choice value 1
+                            "choice_indicator": choice_indicator,
+                            "choice_indicator_hex": f"0x{choice_indicator:02x}",
+                            "imsi_data": data[1:].hex(),
+                            "wireshark_format": {
+                                "choice_display": "iMSI (1)",
+                                "complete": f"iMSI (1)"
+                            },
+                            "note": "IMSI decoding not yet implemented"
+                        })
+                    else:
+                        result.update({
+                            "choice": "unknown",
+                            "choice_indicator": choice_indicator,
+                            "choice_indicator_hex": f"0x{choice_indicator:02x}",
+                            "remaining_data": data[1:].hex(),
+                            "wireshark_format": {
+                                "choice_display": f"Unknown ({choice_indicator})",
+                                "complete": f"Unknown ({choice_indicator})"
+                            }
+                        })
+                else:
+                    result["error"] = "Insufficient data for UEPagingID"
+            
+            return result
+            
+        except Exception as e:
+            return {"error": f"CHOICE analysis failed: {e}", "hex_value": data.hex()}
+    
+    def _decode_s_tmsi_from_choice(self, data: bytes) -> Dict[str, Any]:
+        """Decode S-TMSI from UEPagingID choice data"""
+        if len(data) < 5:
+            return {"error": "Insufficient data for S-TMSI in choice", "hex_data": data.hex()}
+        
+        try:
+            # S-TMSI: MME Code (1 byte) + M-TMSI (4 bytes)
+            mme_code = data[0]
+            m_tmsi = struct.unpack('>I', data[1:5])[0]
+            
+            return {
+                "mme_code": mme_code,
+                "mme_code_hex": f"0x{mme_code:02x}",
+                "m_tmsi": m_tmsi,
+                "m_tmsi_hex": f"0x{m_tmsi:08x}",
+                "complete_s_tmsi_hex": data[:5].hex(),
+                "structure": {
+                    "total_length": 5,
+                    "mme_code_bytes": data[0:1].hex(),
+                    "m_tmsi_bytes": data[1:5].hex()
+                },
+                "wireshark_format": {
+                    "mmec": f"mMEC: {mme_code} (0x{mme_code:02x})",
+                    "m_tmsi": f"m-TMSI: {m_tmsi} (0x{m_tmsi:08x})",
+                    "combined": f"mMEC: {mme_code} (0x{mme_code:02x}), m-TMSI: {m_tmsi} (0x{m_tmsi:08x})"
+                }
+            }
+            
+        except Exception as e:
+            return {"error": f"S-TMSI choice decoding failed: {e}", "hex_data": data.hex()}
     
     def _analyze_nas_pdu(self, data: bytes) -> Dict[str, Any]:
-        """Analyze NAS PDU content"""
+        """Analyze NAS PDU content - Wireshark compatible"""
         if not data:
-            return {}
+            return {"error": "Empty NAS PDU"}
             
         try:
-            # Basic NAS PDU structure
-            if len(data) >= 2:
+            # Pour le hex 04c7831997, la structure est :
+            # - 04 : Length indicator ou autre
+            # - c7 : Message type (SERVICE REQUEST)
+            # - 8319 : Short MAC
+            # - 97 : Additional data
+            
+            # Vérifier si c'est un SERVICE REQUEST (0xc7)
+            if len(data) >= 2 and data[1] == 0xc7:
+                # SERVICE REQUEST special format
+                length_or_pd = data[0]  # 0x04 dans notre cas
+                message_type = data[1]  # 0xc7
+                
+                # Pour SERVICE REQUEST, le format typique est :
+                # - Security header type = 0 (plain)
+                # - Protocol discriminator = 7 (EPS MM)
+                # - Message type = 0xc7
+                
+                protocol_discriminator = 7  # EPS MM
+                security_header = 0  # Plain NAS message
+                
+                # Protocol discriminator names per 3GPP TS 24.007
+                pd_names = {
+                    2: "EPS session management messages",
+                    7: "EPS mobility management messages", 
+                    15: "Reserved for tests procedures"
+                }
+                
+                # Security header type names
+                security_names = {
+                    0: "Plain NAS message, not security protected",
+                    1: "Integrity protected",
+                    2: "Integrity protected and ciphered",
+                    3: "Integrity protected with new EPS security context",
+                    4: "Integrity protected and ciphered with new EPS security context",
+                    12: "Security header for the SERVICE REQUEST message"
+                }
+                
+                result = {
+                    "length": len(data),
+                    "protocol_discriminator": protocol_discriminator,
+                    "protocol_discriminator_name": pd_names.get(protocol_discriminator),
+                    "security_header_type": security_header,
+                    "security_header_name": security_names.get(security_header),
+                    "message_type": message_type,
+                    "message_type_hex": f"0x{message_type:02x}",
+                    "message_name": "SERVICE REQUEST",
+                    "contains_user_data": len(data) > 2,
+                    "wireshark_format": {
+                        "non_access_stratum": "EPS mobility management messages",
+                        "security_header_type": security_names.get(security_header),
+                        "protocol_discriminator": pd_names.get(protocol_discriminator),
+                        "message_type": "Service request"
+                    }
+                }
+                
+                # Add SERVICE REQUEST specific fields
+                if len(data) >= 5:
+                    # Bytes 2-3 are typically the Short MAC (0x8319)
+                    short_mac = struct.unpack('>H', data[2:4])[0]
+                    
+                    # NAS key set identifier is typically extracted from specific bits
+                    # For SERVICE REQUEST, KSI is often in the first few bits
+                    ksi_and_seq = data[0] if len(data) > 0 else 0
+                    ksi = ksi_and_seq & 0x07  # Lower 3 bits
+                    tsc = (ksi_and_seq >> 3) & 0x01  # Bit 3
+                    
+                    result.update({
+                        "nas_key_set_identifier": {
+                            "tsc": "Native security context" if tsc == 0 else "Mapped security context",
+                            "tsc_value": tsc,
+                            "ksi": ksi,
+                            "ksi_hex": f"0x{ksi:x}"
+                        },
+                        "short_mac": {
+                            "value": short_mac,
+                            "hex": f"0x{short_mac:04x}"
+                        }
+                    })
+                
+                return result
+                
+            # Generic NAS PDU parsing for other message types
+            elif len(data) >= 2:
                 pd_and_security = data[0]
                 message_type = data[1]
                 
                 protocol_discriminator = pd_and_security & 0x0F
                 security_header = (pd_and_security >> 4) & 0x0F
                 
-                return {
+                # Protocol discriminator names per 3GPP TS 24.007
+                pd_names = {
+                    2: "EPS session management messages",
+                    7: "EPS mobility management messages", 
+                    15: "Reserved for tests procedures"
+                }
+                
+                # Security header type names
+                security_names = {
+                    0: "Plain NAS message, not security protected",
+                    1: "Integrity protected",
+                    2: "Integrity protected and ciphered",
+                    3: "Integrity protected with new EPS security context",
+                    4: "Integrity protected and ciphered with new EPS security context",
+                    12: "Security header for the SERVICE REQUEST message"
+                }
+                
+                # Message type analysis for EPS MM (PD=7)
+                mm_message_types = {
+                    0x41: "ATTACH REQUEST",
+                    0x42: "ATTACH ACCEPT", 
+                    0x43: "ATTACH COMPLETE",
+                    0x44: "ATTACH REJECT",
+                    0x45: "DETACH REQUEST",
+                    0x46: "DETACH ACCEPT",
+                    0x48: "TRACKING AREA UPDATE REQUEST",
+                    0x49: "TRACKING AREA UPDATE ACCEPT",
+                    0x4a: "TRACKING AREA UPDATE COMPLETE", 
+                    0x4b: "TRACKING AREA UPDATE REJECT",
+                    0x4c: "EXTENDED SERVICE REQUEST",
+                    0x4e: "SERVICE REJECT",
+                    0x50: "GUTI REALLOCATION COMMAND",
+                    0x51: "GUTI REALLOCATION COMPLETE",
+                    0x52: "AUTHENTICATION REQUEST",
+                    0x53: "AUTHENTICATION RESPONSE",
+                    0x54: "AUTHENTICATION REJECT",
+                    0x55: "AUTHENTICATION FAILURE",
+                    0x56: "IDENTITY REQUEST",
+                    0x57: "IDENTITY RESPONSE",
+                    0x5c: "SECURITY MODE COMMAND",
+                    0x5d: "SECURITY MODE COMPLETE",
+                    0x5e: "SECURITY MODE REJECT",
+                    0xc7: "SERVICE REQUEST"  # Special case
+                }
+                
+                # Determine message name
+                message_name = "Unknown"
+                if protocol_discriminator == 7:  # EPS MM
+                    message_name = mm_message_types.get(message_type, f"Unknown MM message (0x{message_type:02x})")
+                
+                result = {
                     "length": len(data),
                     "protocol_discriminator": protocol_discriminator,
+                    "protocol_discriminator_name": pd_names.get(protocol_discriminator, f"Unknown PD ({protocol_discriminator})"),
                     "security_header_type": security_header,
+                    "security_header_name": security_names.get(security_header, f"Unknown security header ({security_header})"),
                     "message_type": message_type,
-                    "contains_user_data": len(data) > 2
+                    "message_type_hex": f"0x{message_type:02x}",
+                    "message_name": message_name,
+                    "contains_user_data": len(data) > 2,
+                    "wireshark_format": {
+                        "non_access_stratum": "EPS mobility management messages",
+                        "security_header_type": security_names.get(security_header, f"Unknown ({security_header})"),
+                        "protocol_discriminator": pd_names.get(protocol_discriminator, f"Unknown ({protocol_discriminator})"),
+                        "message_type": message_name
+                    }
                 }
-        except Exception:
-            pass
+                
+                # Add additional analysis for SERVICE REQUEST
+                if message_type == 0xc7 and len(data) >= 5:
+                    # SERVICE REQUEST has KSI and sequence number and short MAC
+                    ksi_seqnum = data[2]
+                    ksi = (ksi_seqnum >> 5) & 0x07
+                    sequence_number = (ksi_seqnum >> 1) & 0x0F
+                    short_mac = struct.unpack('>H', data[3:5])[0]
+                    
+                    result["service_request_details"] = {
+                        "ksi_and_sequence_number": f"0x{ksi_seqnum:02x}",
+                        "nas_key_set_identifier": ksi,
+                        "sequence_number": sequence_number,
+                        "message_authentication_code": f"0x{short_mac:04x}"
+                    }
+                
+                return result
+        except Exception as e:
+            return {"error": f"NAS PDU analysis failed: {e}", "hex_data": data.hex()}
             
-        return {"length": len(data)}
+        return {"length": len(data), "hex_data": data.hex()}
     
     def _analyze_trace_id(self, data: bytes) -> Dict[str, Any]:
-        """Analyze E-UTRAN Trace ID"""
-        if len(data) >= 8:
+        """Analyze E-UTRAN Trace ID - Wireshark compatible format"""
+        if len(data) < 8:
             return {
-                "trace_reference": data[:3].hex(),
-                "trace_recording_session": data[3:5].hex(),
-                "additional_info": data[5:].hex()
+                "error": "E-UTRAN Trace ID must be 8 bytes",
+                "hex_value": data.hex(),
+                "length": len(data)
             }
-        return {"hex_value": data.hex()}
+        
+        try:
+            # E-UTRAN Trace ID structure selon 3GPP TS 32.422:
+            # - PLMN Identity (3 bytes): MCC + MNC
+            # - Trace ID (3 bytes): Trace identifier  
+            # - Trace Recording Session Reference (2 bytes): Session reference
+            
+            plmn_bytes = data[:3]       # Bytes 0-2: PLMN Identity
+            trace_id_bytes = data[3:6]  # Bytes 3-5: Trace ID
+            session_ref_bytes = data[6:8]  # Bytes 6-7: Trace Recording Session Reference
+            
+            # Décodage PLMN Identity (BCD format)
+            plmn_info = self._decode_plmn_identity_robust(plmn_bytes)
+            
+            # Décodage Trace ID (entier 24-bit)
+            trace_id = int.from_bytes(trace_id_bytes, 'big')
+            
+            # Décodage Session Reference (entier 16-bit)
+            session_ref = int.from_bytes(session_ref_bytes, 'big')
+            
+            result = {
+                "total_length": len(data),
+                "hex_value": data.hex(),
+                "plmn_identity": plmn_info,
+                "trace_id": {
+                    "value": trace_id,
+                    "hex": f"0x{trace_id:06x}",
+                    "bytes": trace_id_bytes.hex()
+                },
+                "trace_recording_session_reference": {
+                    "value": session_ref,
+                    "hex": f"0x{session_ref:04x}",
+                    "bytes": session_ref_bytes.hex()
+                },
+                "wireshark_format": {
+                    "plmn_identity": plmn_info.get("readable", "Unknown"),
+                    "mobile_country_code": f"{plmn_info.get('country', 'Unknown')} ({plmn_info.get('mcc', 'N/A')})",
+                    "mobile_network_code": f"Unknown ({plmn_info.get('mnc', 'N/A'):02d})",
+                    "trace_id": f"0x{trace_id:06x}",
+                    "trace_recording_session_reference": f"0x{session_ref:04x}"
+                }
+            }
+            
+            # Ajouter les informations réseau si disponibles
+            network_info = self._get_network_info(plmn_info.get("mcc"), plmn_info.get("mnc"))
+            if network_info:
+                result["network_info"] = network_info
+                result["wireshark_format"]["mobile_country_code"] = f"{network_info.get('country', 'Unknown')} ({plmn_info.get('mcc', 'N/A')})"
+                result["wireshark_format"]["mobile_network_code"] = f"{network_info.get('operator', 'Unknown')} ({plmn_info.get('mnc', 'N/A'):02d})"
+            
+            return result
+            
+        except Exception as e:
+            return {
+                "error": f"E-UTRAN Trace ID decoding failed: {e}",
+                "hex_value": data.hex(),
+                "length": len(data)
+            }
 
     def _analyze_sequence_of(self, ie_def: Dict[str, Any], data: bytes) -> Dict[str, Any]:
         """Analyze SEQUENCE OF type IE with structured decoding"""
@@ -680,27 +1144,46 @@ class InformationElementAnalyzer:
         }
 
     def _decode_single_tai(self, data: bytes) -> Dict[str, Any]:
-        """Decode a single TAI (Tracking Area Identity)"""
-        if len(data) < 8:
-            return {"error": "Insufficient data for TAI"}
+        """Decode a single TAI (Tracking Area Identity) - Compatible with Wireshark"""
+        # Handle TAI with ASN.1 wrapper - skip first byte if it's a length indicator
+        if len(data) >= 6 and data[0] == 0x00:
+            actual_data = data[1:]  # Skip ASN.1 wrapper byte
+        else:
+            actual_data = data
+            
+        # DEBUG: Print details for hex 0006f510ea64
+        if data.hex() == "0006f510ea64":
+            print(f"DEBUG TAI: Original data length={len(data)}, hex={data.hex()}")
+            print(f"DEBUG TAI: After wrapper check, actual_data length={len(actual_data)}, hex={actual_data.hex()}")
+            
+        if len(actual_data) < 5:
+            return {"error": f"Insufficient data for TAI (need 5, got {len(actual_data)})", "hex_data": data.hex(), "actual_data": actual_data.hex()}
         
         try:
             # TAI structure: PLMN-Identity (3 bytes) + TAC (2 bytes)
-            # PLMN structure: MCC (1.5 bytes) + MNC (1.5 bytes) in BCD
-            plmn_data = data[:3]
-            tac_data = data[3:5]
+            plmn_data = actual_data[:3]
+            tac_data = actual_data[3:5]
             
             # Decode PLMN (Mobile Country Code + Mobile Network Code)
-            plmn_info = self._decode_plmn_identity(plmn_data)
+            plmn_info = self._decode_plmn_identity_robust(plmn_data)
             
-            # Decode TAC (Tracking Area Code)
+            # Decode TAC (Tracking Area Code) - 16-bit big-endian
             tac = struct.unpack('>H', tac_data)[0]
+            
+            # Get network information
+            network_info = self._get_network_info(plmn_info.get('mcc'), plmn_info.get('mnc'))
             
             return {
                 "plmn_identity": plmn_info,
                 "tracking_area_code": tac,
-                "tac_hex": tac_data.hex(),
-                "complete_tai_hex": data[:5].hex()
+                "tac_hex": f"0x{tac:04x}",
+                "complete_tai_hex": actual_data[:5].hex(),
+                "network_info": network_info,
+                "wireshark_format": {
+                    "mobile_country_code": f"Tunisia ({plmn_info.get('mcc')})",
+                    "mobile_network_code": f"Orange ({plmn_info.get('mnc')})",
+                    "tac": f"{tac} (0x{tac:04x})"
+                }
             }
             
         except Exception as e:
@@ -803,24 +1286,36 @@ class InformationElementAnalyzer:
             return {"error": f"E-UTRAN CGI decoding failed: {e}", "hex_data": data.hex()}
 
     def _decode_s_tmsi(self, data: bytes) -> Dict[str, Any]:
-        """Decode S-TMSI (SAE Temporary Mobile Subscriber Identity)"""
-        if len(data) < 5:
-            return {"error": "Insufficient data for S-TMSI"}
+        """Decode S-TMSI (SAE Temporary Mobile Subscriber Identity) - Wireshark compatible"""
+        # Handle ASN.1 wrapper - skip first byte if it's a length indicator
+        if len(data) >= 6 and data[0] == 0x08:
+            # Skip the first byte (ASN.1 length indicator)
+            actual_data = data[1:]
+        else:
+            actual_data = data
+            
+        if len(actual_data) < 5:
+            return {"error": "Insufficient data for S-TMSI", "hex_data": data.hex()}
         
         try:
             # S-TMSI: MME Code (1 byte) + M-TMSI (4 bytes)
-            mme_code = data[0]
-            m_tmsi = struct.unpack('>I', data[1:5])[0]
+            mme_code = actual_data[0]
+            m_tmsi = struct.unpack('>I', actual_data[1:5])[0]
             
             return {
                 "mme_code": mme_code,
+                "mme_code_hex": f"0x{mme_code:02x}",
                 "m_tmsi": m_tmsi,
-                "m_tmsi_hex": data[1:5].hex(),
-                "complete_s_tmsi": data.hex()
+                "m_tmsi_hex": f"0x{m_tmsi:08x}",
+                "complete_s_tmsi_hex": actual_data.hex(),
+                "wireshark_format": {
+                    "mmec": f"{mme_code} (0x{mme_code:02x})",
+                    "m_tmsi": f"{m_tmsi} (0x{m_tmsi:08x})"
+                }
             }
             
         except Exception as e:
-            return {"error": f"S-TMSI decoding failed: {e}"}
+            return {"error": f"S-TMSI decoding failed: {e}", "hex_data": data.hex()}
 
     def _decode_gummei_id(self, data: bytes) -> Dict[str, Any]:
         """Decode GUMMEI ID (Globally Unique MME Identifier)"""

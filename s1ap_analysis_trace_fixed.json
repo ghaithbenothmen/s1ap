@@ -1,0 +1,3399 @@
+{
+  "metadata": {
+    "analyzer_version": "1.0.0",
+    "3gpp_standard": "TS 36.413 V18.3.0",
+    "asn1_compliance": "PER (Packed Encoding Rules)",
+    "wireshark_compatible": true,
+    "analysis_timestamp": "2025-07-09T08:39:56.791677",
+    "pcap_file": "s1CP.pcap"
+  },
+  "summary": {
+    "total_packets": 30,
+    "s1ap_messages": 20,
+    "unique_procedures": 6,
+    "unique_sessions": 7,
+    "analysis_duration": 0.02549004554748535,
+    "first_packet_time": 1737102645.014208,
+    "last_packet_time": 1737102645.014356
+  },
+  "procedures": {
+    "CellTrafficTrace": {
+      "count": 2,
+      "percentage": 10.0,
+      "description": "S1AP CellTrafficTrace procedure"
+    },
+    "Paging": {
+      "count": 11,
+      "percentage": 55.00000000000001,
+      "description": "S1AP Paging procedure"
+    },
+    "downlinkNASTransport": {
+      "count": 3,
+      "percentage": 15.0,
+      "description": "S1AP downlinkNASTransport procedure"
+    },
+    "InitialContextSetup": {
+      "count": 2,
+      "percentage": 10.0,
+      "description": "S1AP InitialContextSetup procedure"
+    },
+    "UEContextRelease": {
+      "count": 1,
+      "percentage": 5.0,
+      "description": "S1AP UEContextRelease procedure"
+    },
+    "initialUEMessage": {
+      "count": 1,
+      "percentage": 5.0,
+      "description": "S1AP initialUEMessage procedure"
+    }
+  },
+  "sessions": {
+    "147254901_673401": {
+      "mme_ue_s1ap_id": 147254901,
+      "enb_ue_s1ap_id": 673401,
+      "first_seen": 1737102645.014208,
+      "last_seen": 1737102645.014208,
+      "duration_seconds": 0.0,
+      "message_count": 1,
+      "procedures": [
+        "CellTrafficTrace"
+      ],
+      "procedure_sequence": [
+        "CellTrafficTrace"
+      ]
+    },
+    "93968664_2337022": {
+      "mme_ue_s1ap_id": 93968664,
+      "enb_ue_s1ap_id": 2337022,
+      "first_seen": 1737102645.014243,
+      "last_seen": 1737102645.014243,
+      "duration_seconds": 0.0,
+      "message_count": 1,
+      "procedures": [
+        "downlinkNASTransport"
+      ],
+      "procedure_sequence": [
+        "downlinkNASTransport"
+      ]
+    },
+    "97732493_145464": {
+      "mme_ue_s1ap_id": 97732493,
+      "enb_ue_s1ap_id": 145464,
+      "first_seen": 1737102645.014259,
+      "last_seen": 1737102645.014259,
+      "duration_seconds": 0.0,
+      "message_count": 1,
+      "procedures": [
+        "downlinkNASTransport"
+      ],
+      "procedure_sequence": [
+        "downlinkNASTransport"
+      ]
+    },
+    "87900469_1633722": {
+      "mme_ue_s1ap_id": 87900469,
+      "enb_ue_s1ap_id": 1633722,
+      "first_seen": 1737102645.014283,
+      "last_seen": 1737102645.014283,
+      "duration_seconds": 0.0,
+      "message_count": 1,
+      "procedures": [
+        "downlinkNASTransport"
+      ],
+      "procedure_sequence": [
+        "downlinkNASTransport"
+      ]
+    },
+    "2163213482_671578": {
+      "mme_ue_s1ap_id": 2163213482,
+      "enb_ue_s1ap_id": 671578,
+      "first_seen": 1737102645.014322,
+      "last_seen": 1737102645.014356,
+      "duration_seconds": 3.3855438232421875e-05,
+      "message_count": 2,
+      "procedures": [
+        "InitialContextSetup",
+        "CellTrafficTrace"
+      ],
+      "procedure_sequence": [
+        "InitialContextSetup",
+        "CellTrafficTrace"
+      ]
+    },
+    "66180323_2273953": {
+      "mme_ue_s1ap_id": 66180323,
+      "enb_ue_s1ap_id": 2273953,
+      "first_seen": 1737102645.014338,
+      "last_seen": 1737102645.014338,
+      "duration_seconds": 0.0,
+      "message_count": 1,
+      "procedures": [
+        "UEContextRelease"
+      ],
+      "procedure_sequence": [
+        "UEContextRelease"
+      ]
+    },
+    "150559182_1619964": {
+      "mme_ue_s1ap_id": 150559182,
+      "enb_ue_s1ap_id": 1619964,
+      "first_seen": 1737102645.014346,
+      "last_seen": 1737102645.014346,
+      "duration_seconds": 0.0,
+      "message_count": 1,
+      "procedures": [
+        "InitialContextSetup"
+      ],
+      "procedure_sequence": [
+        "InitialContextSetup"
+      ]
+    }
+  },
+  "messages": [
+    {
+      "packet_number": 2,
+      "timestamp": 1737102645.014208,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "CellTrafficTrace",
+        "code": 42,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 58,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "c008c6ee75",
+          "analyzed_content": {
+            "value": 147254901,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "08c6ee75",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 147254901,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "800a4679",
+          "analyzed_content": {
+            "value": 673401,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 673401,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x00",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 86,
+          "name": "E-UTRAN-Trace-ID",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "06f5100003a3e9cc",
+          "analyzed_content": {
+            "length": 8,
+            "hex_value": "06f5100003a3e9cc",
+            "trace_id": {
+              "total_length": 8,
+              "hex_value": "06f5100003a3e9cc",
+              "plmn_identity": {
+                "mcc": 605,
+                "mnc": 1,
+                "mnc_digits": 2,
+                "plmn_hex": "06f510",
+                "readable": "605-01",
+                "bcd_breakdown": {
+                  "mcc_digits": [
+                    6,
+                    0,
+                    5
+                  ],
+                  "mnc_digits": [
+                    0,
+                    1
+                  ]
+                }
+              },
+              "trace_id": {
+                "value": 931,
+                "hex": "0x0003a3",
+                "bytes": "0003a3"
+              },
+              "trace_recording_session_reference": {
+                "value": 59852,
+                "hex": "0xe9cc",
+                "bytes": "e9cc"
+              },
+              "wireshark_format": {
+                "plmn_identity": "605-01",
+                "mobile_country_code": "Tunisia (605)",
+                "mobile_network_code": "Orange (01)",
+                "trace_id": "0x0003a3",
+                "trace_recording_session_reference": "0xe9cc"
+              },
+              "network_info": {
+                "country": "Tunisia",
+                "operator": "Orange",
+                "iso_code": "TN",
+                "country_code": "216",
+                "source": "mcc_mnc_table_exact",
+                "mcc_mnc": "605-01",
+                "lookup_method": "exact_match_mnc_01"
+              }
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x40",
+            "value_start": 24,
+            "value_end": 32
+          }
+        },
+        {
+          "id": 100,
+          "name": "EUTRAN-CGI",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "0006f510003a3040",
+          "analyzed_content": {
+            "type": "sequence",
+            "length": 8,
+            "hex_value": "0006f510003a3040",
+            "plmn_identity": {
+              "mcc": 605,
+              "mnc": 1,
+              "mnc_digits": 2,
+              "plmn_hex": "06f510",
+              "readable": "605-01",
+              "bcd_breakdown": {
+                "mcc_digits": [
+                  6,
+                  0,
+                  5
+                ],
+                "mnc_digits": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "cell_identity": 3813440,
+            "enb_id": 14896,
+            "cell_id": 64,
+            "cell_identity_hex": "003a3040",
+            "network_info": {
+              "country": "Tunisia",
+              "operator": "Orange",
+              "iso_code": "TN",
+              "country_code": "216",
+              "source": "mcc_mnc_table_exact",
+              "mcc_mnc": "605-01",
+              "lookup_method": "exact_match_mnc_01"
+            },
+            "decoded_structure": {
+              "total_length": 8,
+              "plmn_bytes": "06f510",
+              "cell_bytes": "003a3040",
+              "parsing_method": "skip_first_byte"
+            }
+          },
+          "debug_info": {
+            "position": 32,
+            "criticality_byte": "0x40",
+            "value_start": 36,
+            "value_end": 44
+          }
+        },
+        {
+          "id": 131,
+          "name": "TraceCollectionEntityIPAddress",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0f800a081914",
+          "analyzed_content": {
+            "bits": "000011111000000000001010000010000001100100010100",
+            "length_bits": 48,
+            "length_bytes": 6
+          },
+          "debug_info": {
+            "position": 44,
+            "criticality_byte": "0x40",
+            "value_start": 48,
+            "value_end": 54
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 147254901,
+          "enb_ue_s1ap_id": 673401
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 4,
+      "timestamp": 1737102645.014235,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "b140",
+          "analyzed_content": {
+            "bits": "1011000101000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "ue_identity_index": 709,
+            "paging_optimization": true
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200e54d8949",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200e54d8949"
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "name": "ps"
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510d932",
+          "analyzed_content": {
+            "type": "sequence_of",
+            "length": 11,
+            "hex_value": "00002f40060006f510d932",
+            "tai_count": 1,
+            "tai_items": [
+              {
+                "plmn_identity": {
+                  "mcc": 605,
+                  "mnc": 1,
+                  "mnc_digits": 2,
+                  "plmn_hex": "06f510",
+                  "readable": "605-01",
+                  "bcd_breakdown": {
+                    "mcc_digits": [
+                      6,
+                      0,
+                      5
+                    ],
+                    "mnc_digits": [
+                      0,
+                      1
+                    ]
+                  }
+                },
+                "tracking_area_code": 55602,
+                "tac_hex": "d932",
+                "complete_tai_hex": "06f510d932",
+                "network_info": {
+                  "country": "Tunisia",
+                  "operator": "Orange",
+                  "iso_code": "TN",
+                  "country_code": "216",
+                  "source": "mcc_mnc_table_exact",
+                  "mcc_mnc": "605-01",
+                  "lookup_method": "exact_match_mnc_01"
+                }
+              }
+            ],
+            "parsed_bytes": 11,
+            "complete_parse": true,
+            "raw_analysis": {
+              "container_skip": 5,
+              "remaining_data": "0006f510d932",
+              "search_pattern": "06f510 found"
+            }
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "9b14",
+          "analyzed_content": {
+            "bits": "1001101100010100",
+            "length_bits": 16,
+            "length_bytes": 2
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 5,
+      "timestamp": 1737102645.014243,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "downlinkNASTransport",
+        "code": 11,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 65,
+        "ies_count": 3
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "c00599d918",
+          "analyzed_content": {
+            "value": 93968664,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "0599d918",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 93968664,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "8023a8fe",
+          "analyzed_content": {
+            "value": 2337022,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 2337022,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x00",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 26,
+          "name": "NAS-PDU",
+          "criticality": "reject",
+          "length": 37,
+          "value_hex": "2407520003c224807fb62188d3102decbeb78f69106912e6bd4bc8f24c9f3ac103cc5cc4a0",
+          "analyzed_content": {
+            "length": 37,
+            "hex_value": "2407520003c224807fb62188d3102decbeb78f69106912e6bd4bc8f24c9f3ac103cc5cc4a0",
+            "nas_pdu": {
+              "length": 37,
+              "protocol_discriminator": 4,
+              "protocol_discriminator_name": "Unknown PD (4)",
+              "security_header_type": 2,
+              "security_header_name": "Integrity protected and ciphered",
+              "message_type": 7,
+              "message_type_hex": "0x07",
+              "message_name": "Unknown",
+              "contains_user_data": true,
+              "wireshark_format": {
+                "non_access_stratum": "EPS mobility management messages",
+                "security_header_type": "Integrity protected and ciphered",
+                "protocol_discriminator": "Unknown (4)",
+                "message_type": "Unknown"
+              }
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x00",
+            "value_start": 24,
+            "value_end": 61
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 93968664,
+          "enb_ue_s1ap_id": 2337022
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 6,
+      "timestamp": 1737102645.014244,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "2500",
+          "analyzed_content": {
+            "bits": "0010010100000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "ue_identity_index": 148,
+            "paging_optimization": true
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200fa2b11ba",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200fa2b11ba"
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "name": "ps"
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea7b",
+          "analyzed_content": {
+            "type": "sequence_of",
+            "length": 11,
+            "hex_value": "00002f40060006f510ea7b",
+            "tai_count": 1,
+            "tai_items": [
+              {
+                "plmn_identity": {
+                  "mcc": 605,
+                  "mnc": 1,
+                  "mnc_digits": 2,
+                  "plmn_hex": "06f510",
+                  "readable": "605-01",
+                  "bcd_breakdown": {
+                    "mcc_digits": [
+                      6,
+                      0,
+                      5
+                    ],
+                    "mnc_digits": [
+                      0,
+                      1
+                    ]
+                  }
+                },
+                "tracking_area_code": 60027,
+                "tac_hex": "ea7b",
+                "complete_tai_hex": "06f510ea7b",
+                "network_info": {
+                  "country": "Tunisia",
+                  "operator": "Orange",
+                  "iso_code": "TN",
+                  "country_code": "216",
+                  "source": "mcc_mnc_table_exact",
+                  "mcc_mnc": "605-01",
+                  "lookup_method": "exact_match_mnc_01"
+                }
+              }
+            ],
+            "parsed_bytes": 11,
+            "complete_parse": true,
+            "raw_analysis": {
+              "container_skip": 5,
+              "remaining_data": "0006f510ea7b",
+              "search_pattern": "06f510 found"
+            }
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "a250",
+          "analyzed_content": {
+            "bits": "1010001001010000",
+            "length_bits": 16,
+            "length_bytes": 2
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 8,
+      "timestamp": 1737102645.014259,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "downlinkNASTransport",
+        "code": 11,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 65,
+        "ies_count": 3
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "c005d3478d",
+          "analyzed_content": {
+            "value": 97732493,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "05d3478d",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 97732493,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "80023838",
+          "analyzed_content": {
+            "value": 145464,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 145464,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x00",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 26,
+          "name": "NAS-PDU",
+          "criticality": "reject",
+          "length": 37,
+          "value_hex": "240752019d573572a297f3f572e861952ae2398f104b180ed47165f24c843a0d4d88405da0",
+          "analyzed_content": {
+            "length": 37,
+            "hex_value": "240752019d573572a297f3f572e861952ae2398f104b180ed47165f24c843a0d4d88405da0",
+            "nas_pdu": {
+              "length": 37,
+              "protocol_discriminator": 4,
+              "protocol_discriminator_name": "Unknown PD (4)",
+              "security_header_type": 2,
+              "security_header_name": "Integrity protected and ciphered",
+              "message_type": 7,
+              "message_type_hex": "0x07",
+              "message_name": "Unknown",
+              "contains_user_data": true,
+              "wireshark_format": {
+                "non_access_stratum": "EPS mobility management messages",
+                "security_header_type": "Integrity protected and ciphered",
+                "protocol_discriminator": "Unknown (4)",
+                "message_type": "Unknown"
+              }
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x00",
+            "value_start": 24,
+            "value_end": 61
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 97732493,
+          "enb_ue_s1ap_id": 145464
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 8,
+      "timestamp": 1737102645.014259,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 54,
+        "ies_count": 6
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "6300",
+          "analyzed_content": {
+            "bits": "0110001100000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "ue_identity_index": 396,
+            "paging_optimization": true
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200fb68e6c1",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200fb68e6c1"
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 44,
+          "name": "pagingDRX",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "60",
+          "analyzed_content": {
+            "value": 96
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "name": "ps"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 29
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510d73d",
+          "analyzed_content": {
+            "type": "sequence_of",
+            "length": 11,
+            "hex_value": "00002f40060006f510d73d",
+            "tai_count": 1,
+            "tai_items": [
+              {
+                "plmn_identity": {
+                  "mcc": 605,
+                  "mnc": 1,
+                  "mnc_digits": 2,
+                  "plmn_hex": "06f510",
+                  "readable": "605-01",
+                  "bcd_breakdown": {
+                    "mcc_digits": [
+                      6,
+                      0,
+                      5
+                    ],
+                    "mnc_digits": [
+                      0,
+                      1
+                    ]
+                  }
+                },
+                "tracking_area_code": 55101,
+                "tac_hex": "d73d",
+                "complete_tai_hex": "06f510d73d",
+                "network_info": {
+                  "country": "Tunisia",
+                  "operator": "Orange",
+                  "iso_code": "TN",
+                  "country_code": "216",
+                  "source": "mcc_mnc_table_exact",
+                  "mcc_mnc": "605-01",
+                  "lookup_method": "exact_match_mnc_01"
+                }
+              }
+            ],
+            "parsed_bytes": 11,
+            "complete_parse": true,
+            "raw_analysis": {
+              "container_skip": 5,
+              "remaining_data": "0006f510d73d",
+              "search_pattern": "06f510 found"
+            }
+          },
+          "debug_info": {
+            "position": 29,
+            "criticality_byte": "0x40",
+            "value_start": 33,
+            "value_end": 44
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "0630",
+          "analyzed_content": {
+            "bits": "0000011000110000",
+            "length_bits": 16,
+            "length_bytes": 2
+          },
+          "debug_info": {
+            "position": 44,
+            "criticality_byte": "0x40",
+            "value_start": 48,
+            "value_end": 50
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 9,
+      "timestamp": 1737102645.014266,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "2500",
+          "analyzed_content": {
+            "bits": "0010010100000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "ue_identity_index": 148,
+            "paging_optimization": true
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200fa2b11ba",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200fa2b11ba"
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "name": "ps"
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea7b",
+          "analyzed_content": {
+            "type": "sequence_of",
+            "length": 11,
+            "hex_value": "00002f40060006f510ea7b",
+            "tai_count": 1,
+            "tai_items": [
+              {
+                "plmn_identity": {
+                  "mcc": 605,
+                  "mnc": 1,
+                  "mnc_digits": 2,
+                  "plmn_hex": "06f510",
+                  "readable": "605-01",
+                  "bcd_breakdown": {
+                    "mcc_digits": [
+                      6,
+                      0,
+                      5
+                    ],
+                    "mnc_digits": [
+                      0,
+                      1
+                    ]
+                  }
+                },
+                "tracking_area_code": 60027,
+                "tac_hex": "ea7b",
+                "complete_tai_hex": "06f510ea7b",
+                "network_info": {
+                  "country": "Tunisia",
+                  "operator": "Orange",
+                  "iso_code": "TN",
+                  "country_code": "216",
+                  "source": "mcc_mnc_table_exact",
+                  "mcc_mnc": "605-01",
+                  "lookup_method": "exact_match_mnc_01"
+                }
+              }
+            ],
+            "parsed_bytes": 11,
+            "complete_parse": true,
+            "raw_analysis": {
+              "container_skip": 5,
+              "remaining_data": "0006f510ea7b",
+              "search_pattern": "06f510 found"
+            }
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "a250",
+          "analyzed_content": {
+            "bits": "1010001001010000",
+            "length_bits": 16,
+            "length_bytes": 2
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 11,
+      "timestamp": 1737102645.014283,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "downlinkNASTransport",
+        "code": 11,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 38,
+        "ies_count": 3
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "c0053d4135",
+          "analyzed_content": {
+            "value": 87900469,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "053d4135",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 87900469,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "8018edba",
+          "analyzed_content": {
+            "value": 1633722,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 1633722,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x00",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 26,
+          "name": "NAS-PDU",
+          "criticality": "reject",
+          "length": 10,
+          "value_hex": "092783dad41001c8096e",
+          "analyzed_content": {
+            "length": 10,
+            "hex_value": "092783dad41001c8096e",
+            "nas_pdu": {
+              "length": 10,
+              "protocol_discriminator": 9,
+              "protocol_discriminator_name": "Unknown PD (9)",
+              "security_header_type": 0,
+              "security_header_name": "Plain NAS message, not security protected",
+              "message_type": 39,
+              "message_type_hex": "0x27",
+              "message_name": "Unknown",
+              "contains_user_data": true,
+              "wireshark_format": {
+                "non_access_stratum": "EPS mobility management messages",
+                "security_header_type": "Plain NAS message, not security protected",
+                "protocol_discriminator": "Unknown (9)",
+                "message_type": "Unknown"
+              }
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x00",
+            "value_start": 24,
+            "value_end": 34
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 87900469,
+          "enb_ue_s1ap_id": 1633722
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 12,
+      "timestamp": 1737102645.014291,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "06c0",
+          "analyzed_content": {
+            "bits": "0000011011000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "ue_identity_index": 27,
+            "paging_optimization": true
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200cd3f7820",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200cd3f7820"
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "name": "ps"
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510d8cd",
+          "analyzed_content": {
+            "type": "sequence_of",
+            "length": 11,
+            "hex_value": "00002f40060006f510d8cd",
+            "tai_count": 1,
+            "tai_items": [
+              {
+                "plmn_identity": {
+                  "mcc": 605,
+                  "mnc": 1,
+                  "mnc_digits": 2,
+                  "plmn_hex": "06f510",
+                  "readable": "605-01",
+                  "bcd_breakdown": {
+                    "mcc_digits": [
+                      6,
+                      0,
+                      5
+                    ],
+                    "mnc_digits": [
+                      0,
+                      1
+                    ]
+                  }
+                },
+                "tracking_area_code": 55501,
+                "tac_hex": "d8cd",
+                "complete_tai_hex": "06f510d8cd",
+                "network_info": {
+                  "country": "Tunisia",
+                  "operator": "Orange",
+                  "iso_code": "TN",
+                  "country_code": "216",
+                  "source": "mcc_mnc_table_exact",
+                  "mcc_mnc": "605-01",
+                  "lookup_method": "exact_match_mnc_01"
+                }
+              }
+            ],
+            "parsed_bytes": 11,
+            "complete_parse": true,
+            "raw_analysis": {
+              "container_skip": 5,
+              "remaining_data": "0006f510d8cd",
+              "search_pattern": "06f510 found"
+            }
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "306c",
+          "analyzed_content": {
+            "bits": "0011000001101100",
+            "length_bits": 16,
+            "length_bytes": 2
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 13,
+      "timestamp": 1737102645.014309,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "2500",
+          "analyzed_content": {
+            "bits": "0010010100000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "ue_identity_index": 148,
+            "paging_optimization": true
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200fa2b11ba",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200fa2b11ba"
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "name": "ps"
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea7b",
+          "analyzed_content": {
+            "type": "sequence_of",
+            "length": 11,
+            "hex_value": "00002f40060006f510ea7b",
+            "tai_count": 1,
+            "tai_items": [
+              {
+                "plmn_identity": {
+                  "mcc": 605,
+                  "mnc": 1,
+                  "mnc_digits": 2,
+                  "plmn_hex": "06f510",
+                  "readable": "605-01",
+                  "bcd_breakdown": {
+                    "mcc_digits": [
+                      6,
+                      0,
+                      5
+                    ],
+                    "mnc_digits": [
+                      0,
+                      1
+                    ]
+                  }
+                },
+                "tracking_area_code": 60027,
+                "tac_hex": "ea7b",
+                "complete_tai_hex": "06f510ea7b",
+                "network_info": {
+                  "country": "Tunisia",
+                  "operator": "Orange",
+                  "iso_code": "TN",
+                  "country_code": "216",
+                  "source": "mcc_mnc_table_exact",
+                  "mcc_mnc": "605-01",
+                  "lookup_method": "exact_match_mnc_01"
+                }
+              }
+            ],
+            "parsed_bytes": 11,
+            "complete_parse": true,
+            "raw_analysis": {
+              "container_skip": 5,
+              "remaining_data": "0006f510ea7b",
+              "search_pattern": "06f510 found"
+            }
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "a250",
+          "analyzed_content": {
+            "bits": "1010001001010000",
+            "length_bits": 16,
+            "length_bytes": 2
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 14,
+      "timestamp": 1737102645.01431,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "2500",
+          "analyzed_content": {
+            "bits": "0010010100000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "ue_identity_index": 148,
+            "paging_optimization": true
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200fa2b11ba",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200fa2b11ba"
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "name": "ps"
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea7b",
+          "analyzed_content": {
+            "type": "sequence_of",
+            "length": 11,
+            "hex_value": "00002f40060006f510ea7b",
+            "tai_count": 1,
+            "tai_items": [
+              {
+                "plmn_identity": {
+                  "mcc": 605,
+                  "mnc": 1,
+                  "mnc_digits": 2,
+                  "plmn_hex": "06f510",
+                  "readable": "605-01",
+                  "bcd_breakdown": {
+                    "mcc_digits": [
+                      6,
+                      0,
+                      5
+                    ],
+                    "mnc_digits": [
+                      0,
+                      1
+                    ]
+                  }
+                },
+                "tracking_area_code": 60027,
+                "tac_hex": "ea7b",
+                "complete_tai_hex": "06f510ea7b",
+                "network_info": {
+                  "country": "Tunisia",
+                  "operator": "Orange",
+                  "iso_code": "TN",
+                  "country_code": "216",
+                  "source": "mcc_mnc_table_exact",
+                  "mcc_mnc": "605-01",
+                  "lookup_method": "exact_match_mnc_01"
+                }
+              }
+            ],
+            "parsed_bytes": 11,
+            "complete_parse": true,
+            "raw_analysis": {
+              "container_skip": 5,
+              "remaining_data": "0006f510ea7b",
+              "search_pattern": "06f510 found"
+            }
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "a250",
+          "analyzed_content": {
+            "bits": "1010001001010000",
+            "length_bits": 16,
+            "length_bytes": 2
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 15,
+      "timestamp": 1737102645.014316,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "fa00",
+          "analyzed_content": {
+            "bits": "1111101000000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "ue_identity_index": 1000,
+            "paging_optimization": true
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200d36752ed",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200d36752ed"
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "name": "ps"
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea76",
+          "analyzed_content": {
+            "type": "sequence_of",
+            "length": 11,
+            "hex_value": "00002f40060006f510ea76",
+            "tai_count": 1,
+            "tai_items": [
+              {
+                "plmn_identity": {
+                  "mcc": 605,
+                  "mnc": 1,
+                  "mnc_digits": 2,
+                  "plmn_hex": "06f510",
+                  "readable": "605-01",
+                  "bcd_breakdown": {
+                    "mcc_digits": [
+                      6,
+                      0,
+                      5
+                    ],
+                    "mnc_digits": [
+                      0,
+                      1
+                    ]
+                  }
+                },
+                "tracking_area_code": 60022,
+                "tac_hex": "ea76",
+                "complete_tai_hex": "06f510ea76",
+                "network_info": {
+                  "country": "Tunisia",
+                  "operator": "Orange",
+                  "iso_code": "TN",
+                  "country_code": "216",
+                  "source": "mcc_mnc_table_exact",
+                  "mcc_mnc": "605-01",
+                  "lookup_method": "exact_match_mnc_01"
+                }
+              }
+            ],
+            "parsed_bytes": 11,
+            "complete_parse": true,
+            "raw_analysis": {
+              "container_skip": 5,
+              "remaining_data": "0006f510ea76",
+              "search_pattern": "06f510 found"
+            }
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "4fa0",
+          "analyzed_content": {
+            "bits": "0100111110100000",
+            "length_bits": 16,
+            "length_bytes": 2
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 16,
+      "timestamp": 1737102645.014317,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "fa00",
+          "analyzed_content": {
+            "bits": "1111101000000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "ue_identity_index": 1000,
+            "paging_optimization": true
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200d36752ed",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200d36752ed"
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "name": "ps"
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea76",
+          "analyzed_content": {
+            "type": "sequence_of",
+            "length": 11,
+            "hex_value": "00002f40060006f510ea76",
+            "tai_count": 1,
+            "tai_items": [
+              {
+                "plmn_identity": {
+                  "mcc": 605,
+                  "mnc": 1,
+                  "mnc_digits": 2,
+                  "plmn_hex": "06f510",
+                  "readable": "605-01",
+                  "bcd_breakdown": {
+                    "mcc_digits": [
+                      6,
+                      0,
+                      5
+                    ],
+                    "mnc_digits": [
+                      0,
+                      1
+                    ]
+                  }
+                },
+                "tracking_area_code": 60022,
+                "tac_hex": "ea76",
+                "complete_tai_hex": "06f510ea76",
+                "network_info": {
+                  "country": "Tunisia",
+                  "operator": "Orange",
+                  "iso_code": "TN",
+                  "country_code": "216",
+                  "source": "mcc_mnc_table_exact",
+                  "mcc_mnc": "605-01",
+                  "lookup_method": "exact_match_mnc_01"
+                }
+              }
+            ],
+            "parsed_bytes": 11,
+            "complete_parse": true,
+            "raw_analysis": {
+              "container_skip": 5,
+              "remaining_data": "0006f510ea76",
+              "search_pattern": "06f510 found"
+            }
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "4fa0",
+          "analyzed_content": {
+            "bits": "0100111110100000",
+            "length_bits": 16,
+            "length_bytes": 2
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 18,
+      "timestamp": 1737102645.014322,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "InitialContextSetup",
+        "code": 9,
+        "type": "SuccessfulOutcome",
+        "criticality": "reject"
+      },
+      "size": {
+        "raw_bytes": 42,
+        "ies_count": 3
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 4,
+          "value_hex": "80f004aa",
+          "analyzed_content": {
+            "value": 2163213482,
+            "length": 4,
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 2163213482,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 11
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 4,
+          "value_hex": "800a3f5a",
+          "analyzed_content": {
+            "value": 671578,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 671578,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 11,
+            "criticality_byte": "0x40",
+            "value_start": 15,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 51,
+          "name": "E-RABSetupListCtxtSURes",
+          "criticality": "ignore",
+          "length": 15,
+          "value_hex": "000032400a0a1f0a4961ba12ce303c",
+          "analyzed_content": {
+            "type": "sequence_of",
+            "length": 15,
+            "hex_value": "000032400a0a1f0a4961ba12ce303c",
+            "sequence_of_data": "000032400a0a1f0a4961ba12ce303c",
+            "estimated_items": 1,
+            "analysis_note": "Generic SEQUENCE OF - specific decoder not implemented"
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 38
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 2163213482,
+          "enb_ue_s1ap_id": 671578
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 22,
+      "timestamp": 1737102645.014338,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "b140",
+          "analyzed_content": {
+            "bits": "1011000101000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "ue_identity_index": 709,
+            "paging_optimization": true
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200e54d8949",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200e54d8949"
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "name": "ps"
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510d932",
+          "analyzed_content": {
+            "type": "sequence_of",
+            "length": 11,
+            "hex_value": "00002f40060006f510d932",
+            "tai_count": 1,
+            "tai_items": [
+              {
+                "plmn_identity": {
+                  "mcc": 605,
+                  "mnc": 1,
+                  "mnc_digits": 2,
+                  "plmn_hex": "06f510",
+                  "readable": "605-01",
+                  "bcd_breakdown": {
+                    "mcc_digits": [
+                      6,
+                      0,
+                      5
+                    ],
+                    "mnc_digits": [
+                      0,
+                      1
+                    ]
+                  }
+                },
+                "tracking_area_code": 55602,
+                "tac_hex": "d932",
+                "complete_tai_hex": "06f510d932",
+                "network_info": {
+                  "country": "Tunisia",
+                  "operator": "Orange",
+                  "iso_code": "TN",
+                  "country_code": "216",
+                  "source": "mcc_mnc_table_exact",
+                  "mcc_mnc": "605-01",
+                  "lookup_method": "exact_match_mnc_01"
+                }
+              }
+            ],
+            "parsed_bytes": 11,
+            "complete_parse": true,
+            "raw_analysis": {
+              "container_skip": 5,
+              "remaining_data": "0006f510d932",
+              "search_pattern": "06f510 found"
+            }
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "9b14",
+          "analyzed_content": {
+            "bits": "1001101100010100",
+            "length_bits": 16,
+            "length_bytes": 2
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 23,
+      "timestamp": 1737102645.014338,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "UEContextRelease",
+        "code": 23,
+        "type": "SuccessfulOutcome",
+        "criticality": "reject"
+      },
+      "size": {
+        "raw_bytes": 24,
+        "ies_count": 2
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 5,
+          "value_hex": "c003f1d4e3",
+          "analyzed_content": {
+            "value": 66180323,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "03f1d4e3",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 66180323,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 4,
+          "value_hex": "8022b2a1",
+          "analyzed_content": {
+            "value": 2273953,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 2273953,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x40",
+            "value_start": 16,
+            "value_end": 20
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 66180323,
+          "enb_ue_s1ap_id": 2273953
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 24,
+      "timestamp": 1737102645.01434,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "fa00",
+          "analyzed_content": {
+            "bits": "1111101000000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "ue_identity_index": 1000,
+            "paging_optimization": true
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200d36752ed",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200d36752ed"
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "name": "ps"
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea76",
+          "analyzed_content": {
+            "type": "sequence_of",
+            "length": 11,
+            "hex_value": "00002f40060006f510ea76",
+            "tai_count": 1,
+            "tai_items": [
+              {
+                "plmn_identity": {
+                  "mcc": 605,
+                  "mnc": 1,
+                  "mnc_digits": 2,
+                  "plmn_hex": "06f510",
+                  "readable": "605-01",
+                  "bcd_breakdown": {
+                    "mcc_digits": [
+                      6,
+                      0,
+                      5
+                    ],
+                    "mnc_digits": [
+                      0,
+                      1
+                    ]
+                  }
+                },
+                "tracking_area_code": 60022,
+                "tac_hex": "ea76",
+                "complete_tai_hex": "06f510ea76",
+                "network_info": {
+                  "country": "Tunisia",
+                  "operator": "Orange",
+                  "iso_code": "TN",
+                  "country_code": "216",
+                  "source": "mcc_mnc_table_exact",
+                  "mcc_mnc": "605-01",
+                  "lookup_method": "exact_match_mnc_01"
+                }
+              }
+            ],
+            "parsed_bytes": 11,
+            "complete_parse": true,
+            "raw_analysis": {
+              "container_skip": 5,
+              "remaining_data": "0006f510ea76",
+              "search_pattern": "06f510 found"
+            }
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "4fa0",
+          "analyzed_content": {
+            "bits": "0100111110100000",
+            "length_bits": 16,
+            "length_bytes": 2
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 25,
+      "timestamp": 1737102645.014346,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "InitialContextSetup",
+        "code": 9,
+        "type": "SuccessfulOutcome",
+        "criticality": "reject"
+      },
+      "size": {
+        "raw_bytes": 43,
+        "ies_count": 3
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 5,
+          "value_hex": "c008f959ce",
+          "analyzed_content": {
+            "value": 150559182,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "08f959ce",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 150559182,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 4,
+          "value_hex": "8018b7fc",
+          "analyzed_content": {
+            "value": 1619964,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 1619964,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x40",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 51,
+          "name": "E-RABSetupListCtxtSURes",
+          "criticality": "ignore",
+          "length": 15,
+          "value_hex": "000032400a0a1f0a49c946534846e2",
+          "analyzed_content": {
+            "type": "sequence_of",
+            "length": 15,
+            "hex_value": "000032400a0a1f0a49c946534846e2",
+            "sequence_of_data": "000032400a0a1f0a49c946534846e2",
+            "estimated_items": 1,
+            "analysis_note": "Generic SEQUENCE OF - specific decoder not implemented"
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x40",
+            "value_start": 24,
+            "value_end": 39
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 150559182,
+          "enb_ue_s1ap_id": 1619964
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 26,
+      "timestamp": 1737102645.014356,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "CellTrafficTrace",
+        "code": 42,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 57,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "80f004aa",
+          "analyzed_content": {
+            "value": 2163213482,
+            "length": 4,
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 2163213482,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 11
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "800a3f5a",
+          "analyzed_content": {
+            "value": 671578,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 671578,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 11,
+            "criticality_byte": "0x00",
+            "value_start": 15,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 86,
+          "name": "E-UTRAN-Trace-ID",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "06f5100001318da0",
+          "analyzed_content": {
+            "length": 8,
+            "hex_value": "06f5100001318da0",
+            "trace_id": {
+              "total_length": 8,
+              "hex_value": "06f5100001318da0",
+              "plmn_identity": {
+                "mcc": 605,
+                "mnc": 1,
+                "mnc_digits": 2,
+                "plmn_hex": "06f510",
+                "readable": "605-01",
+                "bcd_breakdown": {
+                  "mcc_digits": [
+                    6,
+                    0,
+                    5
+                  ],
+                  "mnc_digits": [
+                    0,
+                    1
+                  ]
+                }
+              },
+              "trace_id": {
+                "value": 305,
+                "hex": "0x000131",
+                "bytes": "000131"
+              },
+              "trace_recording_session_reference": {
+                "value": 36256,
+                "hex": "0x8da0",
+                "bytes": "8da0"
+              },
+              "wireshark_format": {
+                "plmn_identity": "605-01",
+                "mobile_country_code": "Tunisia (605)",
+                "mobile_network_code": "Orange (01)",
+                "trace_id": "0x000131",
+                "trace_recording_session_reference": "0x8da0"
+              },
+              "network_info": {
+                "country": "Tunisia",
+                "operator": "Orange",
+                "iso_code": "TN",
+                "country_code": "216",
+                "source": "mcc_mnc_table_exact",
+                "mcc_mnc": "605-01",
+                "lookup_method": "exact_match_mnc_01"
+              }
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 31
+          }
+        },
+        {
+          "id": 100,
+          "name": "EUTRAN-CGI",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "0006f51000131040",
+          "analyzed_content": {
+            "type": "sequence",
+            "length": 8,
+            "hex_value": "0006f51000131040",
+            "plmn_identity": {
+              "mcc": 605,
+              "mnc": 1,
+              "mnc_digits": 2,
+              "plmn_hex": "06f510",
+              "readable": "605-01",
+              "bcd_breakdown": {
+                "mcc_digits": [
+                  6,
+                  0,
+                  5
+                ],
+                "mnc_digits": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "cell_identity": 1249344,
+            "enb_id": 4880,
+            "cell_id": 64,
+            "cell_identity_hex": "00131040",
+            "network_info": {
+              "country": "Tunisia",
+              "operator": "Orange",
+              "iso_code": "TN",
+              "country_code": "216",
+              "source": "mcc_mnc_table_exact",
+              "mcc_mnc": "605-01",
+              "lookup_method": "exact_match_mnc_01"
+            },
+            "decoded_structure": {
+              "total_length": 8,
+              "plmn_bytes": "06f510",
+              "cell_bytes": "00131040",
+              "parsing_method": "skip_first_byte"
+            }
+          },
+          "debug_info": {
+            "position": 31,
+            "criticality_byte": "0x40",
+            "value_start": 35,
+            "value_end": 43
+          }
+        },
+        {
+          "id": 131,
+          "name": "TraceCollectionEntityIPAddress",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0f800a081914",
+          "analyzed_content": {
+            "bits": "000011111000000000001010000010000001100100010100",
+            "length_bits": 48,
+            "length_bytes": 6
+          },
+          "debug_info": {
+            "position": 43,
+            "criticality_byte": "0x40",
+            "value_start": 47,
+            "value_end": 53
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 2163213482,
+          "enb_ue_s1ap_id": 671578
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 27,
+      "timestamp": 1737102645.014356,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "initialUEMessage",
+        "code": 12,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 61,
+        "ies_count": 6
+      },
+      "ies": [
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "800bc58d",
+          "analyzed_content": {
+            "value": 771469,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 771469,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 11
+          }
+        },
+        {
+          "id": 26,
+          "name": "NAS-PDU",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "04c7831997",
+          "analyzed_content": {
+            "length": 5,
+            "hex_value": "04c7831997",
+            "nas_pdu": {
+              "length": 5,
+              "protocol_discriminator": 7,
+              "protocol_discriminator_name": "EPS mobility management messages",
+              "security_header_type": 0,
+              "security_header_name": "Plain NAS message, not security protected",
+              "message_type": 199,
+              "message_type_hex": "0xc7",
+              "message_name": "SERVICE REQUEST",
+              "contains_user_data": true,
+              "wireshark_format": {
+                "non_access_stratum": "EPS mobility management messages",
+                "security_header_type": "Plain NAS message, not security protected",
+                "protocol_discriminator": "EPS mobility management messages",
+                "message_type": "Service request"
+              },
+              "nas_key_set_identifier": {
+                "tsc": "Native security context",
+                "tsc_value": 0,
+                "ksi": 4,
+                "ksi_hex": "0x4"
+              },
+              "short_mac": {
+                "value": 33561,
+                "hex": "0x8319"
+              }
+            }
+          },
+          "debug_info": {
+            "position": 11,
+            "criticality_byte": "0x00",
+            "value_start": 15,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 67,
+          "name": "TAI",
+          "criticality": "reject",
+          "length": 6,
+          "value_hex": "0006f510ea64",
+          "analyzed_content": {
+            "type": "sequence",
+            "length": 6,
+            "hex_value": "0006f510ea64",
+            "plmn_identity": {
+              "mcc": 605,
+              "mnc": 1,
+              "mnc_digits": 2,
+              "plmn_hex": "06f510",
+              "readable": "605-01",
+              "bcd_breakdown": {
+                "mcc_digits": [
+                  6,
+                  0,
+                  5
+                ],
+                "mnc_digits": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "tracking_area_code": 60004,
+            "tac_hex": "0xea64",
+            "complete_tai_hex": "06f510ea64",
+            "network_info": {
+              "country": "Tunisia",
+              "operator": "Orange",
+              "iso_code": "TN",
+              "country_code": "216",
+              "source": "mcc_mnc_table_exact",
+              "mcc_mnc": "605-01",
+              "lookup_method": "exact_match_mnc_01"
+            },
+            "wireshark_format": {
+              "mobile_country_code": "Tunisia (605)",
+              "mobile_network_code": "Orange (1)",
+              "tac": "60004 (0xea64)"
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x00",
+            "value_start": 24,
+            "value_end": 30
+          }
+        },
+        {
+          "id": 100,
+          "name": "EUTRAN-CGI",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "0006f510189a5350",
+          "analyzed_content": {
+            "type": "sequence",
+            "length": 8,
+            "hex_value": "0006f510189a5350",
+            "plmn_identity": {
+              "mcc": 605,
+              "mnc": 1,
+              "mnc_digits": 2,
+              "plmn_hex": "06f510",
+              "readable": "605-01",
+              "bcd_breakdown": {
+                "mcc_digits": [
+                  6,
+                  0,
+                  5
+                ],
+                "mnc_digits": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "cell_identity": 412767056,
+            "enb_id": 1612371,
+            "cell_id": 80,
+            "cell_identity_hex": "189a5350",
+            "network_info": {
+              "country": "Tunisia",
+              "operator": "Orange",
+              "iso_code": "TN",
+              "country_code": "216",
+              "source": "mcc_mnc_table_exact",
+              "mcc_mnc": "605-01",
+              "lookup_method": "exact_match_mnc_01"
+            },
+            "decoded_structure": {
+              "total_length": 8,
+              "plmn_bytes": "06f510",
+              "cell_bytes": "189a5350",
+              "parsing_method": "skip_first_byte"
+            }
+          },
+          "debug_info": {
+            "position": 30,
+            "criticality_byte": "0x40",
+            "value_start": 34,
+            "value_end": 42
+          }
+        },
+        {
+          "id": 134,
+          "name": "RRC-Establishment-Cause",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "20",
+          "analyzed_content": {
+            "value": 32
+          },
+          "debug_info": {
+            "position": 42,
+            "criticality_byte": "0x40",
+            "value_start": 46,
+            "value_end": 47
+          }
+        },
+        {
+          "id": 96,
+          "name": "S-TMSI",
+          "criticality": "reject",
+          "length": 6,
+          "value_hex": "0800c9ec9409",
+          "analyzed_content": {
+            "type": "sequence",
+            "length": 6,
+            "hex_value": "0800c9ec9409",
+            "mme_code": 0,
+            "mme_code_hex": "0x00",
+            "m_tmsi": 3387724809,
+            "m_tmsi_hex": "0xc9ec9409",
+            "complete_s_tmsi_hex": "00c9ec9409",
+            "wireshark_format": {
+              "mmec": "0 (0x00)",
+              "m_tmsi": "3387724809 (0xc9ec9409)"
+            }
+          },
+          "debug_info": {
+            "position": 47,
+            "criticality_byte": "0x00",
+            "value_start": 51,
+            "value_end": 57
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": 771469
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    }
+  ],
+  "statistics": {
+    "procedures_distribution": {
+      "CellTrafficTrace": 2,
+      "Paging": 11,
+      "downlinkNASTransport": 3,
+      "InitialContextSetup": 2,
+      "UEContextRelease": 1,
+      "initialUEMessage": 1
+    },
+    "ies_distribution": {
+      "MME-UE-S1AP-ID": 8,
+      "eNB-UE-S1AP-ID": 9,
+      "E-UTRAN-Trace-ID": 2,
+      "EUTRAN-CGI": 3,
+      "TraceCollectionEntityIPAddress": 2,
+      "UEIdentityIndexValue": 11,
+      "UEPagingID": 11,
+      "CNDomain": 11,
+      "TAIList": 11,
+      "extended-UEIdentityIndexValue": 11,
+      "NAS-PDU": 4,
+      "pagingDRX": 1,
+      "E-RABSetupListCtxtSURes": 2,
+      "TAI": 1,
+      "RRC-Establishment-Cause": 1,
+      "S-TMSI": 1
+    },
+    "error_distribution": {},
+    "temporal_analysis": {
+      "09:00": {
+        "total_messages": 20,
+        "procedures": {
+          "CellTrafficTrace": 2,
+          "Paging": 11,
+          "downlinkNASTransport": 3,
+          "InitialContextSetup": 2,
+          "UEContextRelease": 1,
+          "initialUEMessage": 1
+        }
+      }
+    },
+    "business_insights": {
+      "call_patterns": {
+        "most_common_procedure": "Paging",
+        "attach_attempts": 0,
+        "handover_attempts": 0,
+        "paging_requests": 11,
+        "bearer_setups": 0
+      },
+      "network_load": {
+        "peak_hour": "09:00",
+        "peak_messages": 20,
+        "total_hours_analyzed": 1
+      }
+    }
+  },
+  "validation": {
+    "wireshark_filters": [
+      {
+        "name": "All S1AP Messages",
+        "filter": "s1ap",
+        "description": "Display all S1AP protocol messages"
+      },
+      {
+        "name": "S1AP CellTrafficTrace",
+        "filter": "s1ap.procedureCode == 42",
+        "description": "Filter for CellTrafficTrace procedures"
+      },
+      {
+        "name": "S1AP Paging",
+        "filter": "s1ap.procedureCode == 42",
+        "description": "Filter for Paging procedures"
+      },
+      {
+        "name": "S1AP downlinkNASTransport",
+        "filter": "s1ap.procedureCode == 42",
+        "description": "Filter for downlinkNASTransport procedures"
+      },
+      {
+        "name": "S1AP with Errors",
+        "filter": "s1ap and (tcp.analysis.flags or sctp.chunk_flags_data_e or s1ap.unsuccessfulOutcome)",
+        "description": "Messages that might have parsing issues"
+      }
+    ],
+    "verification_notes": [
+      "Compare packet counts between this analysis and Wireshark's Statistics → Protocol Hierarchy",
+      "Verify procedure codes match between decoded messages and Wireshark's S1AP dissector",
+      "Cross-check IE presence and values with Wireshark's packet details pane",
+      "Expected S1AP message count in Wireshark: should match s1ap_messages in summary",
+      "Use 'Statistics → Conversations' to verify SCTP streams contain S1AP data"
+    ],
+    "conformance_check": {
+      "asn1_per_compliant": true,
+      "3gpp_ts_36413_version": "V18.3.0",
+      "wireshark_version_tested": "4.0+",
+      "validation_timestamp": "2025-07-09T08:39:56.791677"
+    }
+  }
+}

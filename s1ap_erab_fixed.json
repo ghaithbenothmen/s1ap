@@ -1,0 +1,6378 @@
+{
+  "metadata": {
+    "analyzer_version": "1.0.0",
+    "3gpp_standard": "TS 36.413 V18.3.0",
+    "asn1_compliance": "PER (Packed Encoding Rules)",
+    "wireshark_compatible": true,
+    "analysis_timestamp": "2025-07-09T11:08:25.400631",
+    "pcap_file": "s1CP.pcap"
+  },
+  "summary": {
+    "total_packets": 50,
+    "s1ap_messages": 35,
+    "unique_procedures": 7,
+    "unique_sessions": 11,
+    "analysis_duration": 0.029130935668945312,
+    "first_packet_time": 1737102645.014208,
+    "last_packet_time": 1737102645.014469
+  },
+  "procedures": {
+    "CellTrafficTrace": {
+      "count": 5,
+      "percentage": 14.285714285714285,
+      "description": "S1AP CellTrafficTrace procedure"
+    },
+    "Paging": {
+      "count": 16,
+      "percentage": 45.714285714285715,
+      "description": "S1AP Paging procedure"
+    },
+    "downlinkNASTransport": {
+      "count": 3,
+      "percentage": 8.571428571428571,
+      "description": "S1AP downlinkNASTransport procedure"
+    },
+    "InitialContextSetup": {
+      "count": 5,
+      "percentage": 14.285714285714285,
+      "description": "S1AP InitialContextSetup procedure"
+    },
+    "UEContextRelease": {
+      "count": 3,
+      "percentage": 8.571428571428571,
+      "description": "S1AP UEContextRelease procedure"
+    },
+    "initialUEMessage": {
+      "count": 2,
+      "percentage": 5.714285714285714,
+      "description": "S1AP initialUEMessage procedure"
+    },
+    "UEContextReleaseRequest": {
+      "count": 1,
+      "percentage": 2.857142857142857,
+      "description": "S1AP UEContextReleaseRequest procedure"
+    }
+  },
+  "sessions": {
+    "147254901_673401": {
+      "mme_ue_s1ap_id": 147254901,
+      "enb_ue_s1ap_id": 673401,
+      "first_seen": 1737102645.014208,
+      "last_seen": 1737102645.014208,
+      "duration_seconds": 0.0,
+      "message_count": 1,
+      "procedures": [
+        "CellTrafficTrace"
+      ],
+      "procedure_sequence": [
+        "CellTrafficTrace"
+      ]
+    },
+    "93968664_2337022": {
+      "mme_ue_s1ap_id": 93968664,
+      "enb_ue_s1ap_id": 2337022,
+      "first_seen": 1737102645.014243,
+      "last_seen": 1737102645.014243,
+      "duration_seconds": 0.0,
+      "message_count": 1,
+      "procedures": [
+        "downlinkNASTransport"
+      ],
+      "procedure_sequence": [
+        "downlinkNASTransport"
+      ]
+    },
+    "97732493_145464": {
+      "mme_ue_s1ap_id": 97732493,
+      "enb_ue_s1ap_id": 145464,
+      "first_seen": 1737102645.014259,
+      "last_seen": 1737102645.014259,
+      "duration_seconds": 0.0,
+      "message_count": 1,
+      "procedures": [
+        "downlinkNASTransport"
+      ],
+      "procedure_sequence": [
+        "downlinkNASTransport"
+      ]
+    },
+    "87900469_1633722": {
+      "mme_ue_s1ap_id": 87900469,
+      "enb_ue_s1ap_id": 1633722,
+      "first_seen": 1737102645.014283,
+      "last_seen": 1737102645.014283,
+      "duration_seconds": 0.0,
+      "message_count": 1,
+      "procedures": [
+        "downlinkNASTransport"
+      ],
+      "procedure_sequence": [
+        "downlinkNASTransport"
+      ]
+    },
+    "2163213482_671578": {
+      "mme_ue_s1ap_id": 2163213482,
+      "enb_ue_s1ap_id": 671578,
+      "first_seen": 1737102645.014322,
+      "last_seen": 1737102645.014356,
+      "duration_seconds": 3.3855438232421875e-05,
+      "message_count": 2,
+      "procedures": [
+        "InitialContextSetup",
+        "CellTrafficTrace"
+      ],
+      "procedure_sequence": [
+        "InitialContextSetup",
+        "CellTrafficTrace"
+      ]
+    },
+    "66180323_2273953": {
+      "mme_ue_s1ap_id": 66180323,
+      "enb_ue_s1ap_id": 2273953,
+      "first_seen": 1737102645.014338,
+      "last_seen": 1737102645.014338,
+      "duration_seconds": 0.0,
+      "message_count": 1,
+      "procedures": [
+        "UEContextRelease"
+      ],
+      "procedure_sequence": [
+        "UEContextRelease"
+      ]
+    },
+    "150559182_1619964": {
+      "mme_ue_s1ap_id": 150559182,
+      "enb_ue_s1ap_id": 1619964,
+      "first_seen": 1737102645.014346,
+      "last_seen": 1737102645.014418,
+      "duration_seconds": 7.200241088867188e-05,
+      "message_count": 2,
+      "procedures": [
+        "InitialContextSetup",
+        "CellTrafficTrace"
+      ],
+      "procedure_sequence": [
+        "InitialContextSetup",
+        "CellTrafficTrace"
+      ]
+    },
+    "35085124_284909": {
+      "mme_ue_s1ap_id": 35085124,
+      "enb_ue_s1ap_id": 284909,
+      "first_seen": 1737102645.014401,
+      "last_seen": 1737102645.014401,
+      "duration_seconds": 0.0,
+      "message_count": 1,
+      "procedures": [
+        "UEContextRelease"
+      ],
+      "procedure_sequence": [
+        "UEContextRelease"
+      ]
+    },
+    "171142310_2850780": {
+      "mme_ue_s1ap_id": 171142310,
+      "enb_ue_s1ap_id": 2850780,
+      "first_seen": 1737102645.014409,
+      "last_seen": 1737102645.014426,
+      "duration_seconds": 1.6927719116210938e-05,
+      "message_count": 2,
+      "procedures": [
+        "InitialContextSetup",
+        "CellTrafficTrace"
+      ],
+      "procedure_sequence": [
+        "InitialContextSetup",
+        "CellTrafficTrace"
+      ]
+    },
+    "167827039_2180765": {
+      "mme_ue_s1ap_id": 167827039,
+      "enb_ue_s1ap_id": 2180765,
+      "first_seen": 1737102645.014469,
+      "last_seen": 1737102645.014469,
+      "duration_seconds": 0.0,
+      "message_count": 1,
+      "procedures": [
+        "CellTrafficTrace"
+      ],
+      "procedure_sequence": [
+        "CellTrafficTrace"
+      ]
+    },
+    "16853101_1359782": {
+      "mme_ue_s1ap_id": 16853101,
+      "enb_ue_s1ap_id": 1359782,
+      "first_seen": 1737102645.014469,
+      "last_seen": 1737102645.014469,
+      "duration_seconds": 0.0,
+      "message_count": 1,
+      "procedures": [
+        "UEContextReleaseRequest"
+      ],
+      "procedure_sequence": [
+        "UEContextReleaseRequest"
+      ]
+    }
+  },
+  "messages": [
+    {
+      "packet_number": 2,
+      "timestamp": 1737102645.014208,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "CellTrafficTrace",
+        "code": 42,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 58,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "c008c6ee75",
+          "analyzed_content": {
+            "value": 147254901,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "08c6ee75",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 147254901,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "800a4679",
+          "analyzed_content": {
+            "value": 673401,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 673401,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x00",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 86,
+          "name": "E-UTRAN-Trace-ID",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "06f5100003a3e9cc",
+          "analyzed_content": {
+            "length": 8,
+            "hex_value": "06f5100003a3e9cc",
+            "trace_id": {
+              "total_length": 8,
+              "hex_value": "06f5100003a3e9cc",
+              "plmn_identity": {
+                "mcc": 605,
+                "mnc": 1,
+                "mnc_digits": 2,
+                "plmn_hex": "06f510",
+                "readable": "605-01",
+                "bcd_breakdown": {
+                  "mcc_digits": [
+                    6,
+                    0,
+                    5
+                  ],
+                  "mnc_digits": [
+                    0,
+                    1
+                  ]
+                }
+              },
+              "trace_id": {
+                "value": 931,
+                "hex": "0x0003a3",
+                "bytes": "0003a3"
+              },
+              "trace_recording_session_reference": {
+                "value": 59852,
+                "hex": "0xe9cc",
+                "bytes": "e9cc"
+              },
+              "wireshark_format": {
+                "plmn_identity": "605-01",
+                "mobile_country_code": "Tunisia (605)",
+                "mobile_network_code": "Orange (01)",
+                "trace_id": "0x0003a3",
+                "trace_recording_session_reference": "0xe9cc"
+              },
+              "network_info": {
+                "country": "Tunisia",
+                "operator": "Orange",
+                "iso_code": "TN",
+                "country_code": "216",
+                "source": "mcc_mnc_table_exact",
+                "mcc_mnc": "605-01",
+                "lookup_method": "exact_match_mnc_01"
+              }
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x40",
+            "value_start": 24,
+            "value_end": 32
+          }
+        },
+        {
+          "id": 100,
+          "name": "EUTRAN-CGI",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "0006f510003a3040",
+          "analyzed_content": {
+            "plmn": {
+              "mcc": "605",
+              "mnc": "01",
+              "plmn_id": "605-01",
+              "operator": "Orange Tunisia"
+            },
+            "cell_id": 3813440,
+            "cell_id_hex": "0x03a3040",
+            "enb_id": 14896,
+            "enb_id_hex": "0x03a30",
+            "cell_identity": 64,
+            "cgi_string": "605-01-03a30-40",
+            "network_info": {
+              "operator": "Orange Tunisia",
+              "enb_type": "Small Cell"
+            }
+          },
+          "debug_info": {
+            "position": 32,
+            "criticality_byte": "0x40",
+            "value_start": 36,
+            "value_end": 44
+          }
+        },
+        {
+          "id": 131,
+          "name": "TraceCollectionEntityIPAddress",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0f800a081914",
+          "analyzed_content": {
+            "bits": "000011111000000000001010000010000001100100010100",
+            "length_bits": 48,
+            "length_bytes": 6,
+            "hex_value": "0f800a081914"
+          },
+          "debug_info": {
+            "position": 44,
+            "criticality_byte": "0x40",
+            "value_start": 48,
+            "value_end": 54
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 147254901,
+          "enb_ue_s1ap_id": 673401
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 4,
+      "timestamp": 1737102645.014235,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "b140",
+          "analyzed_content": {
+            "bits": "1011000101000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "b140",
+            "ue_identity_index_value": 709,
+            "decimal_value": 709,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "1011000101",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 1011 0001 01.. .... decimal value 709]",
+              "bit_string": "1011000101000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 709",
+              "formatted_bits": "1011 0001 01.. ....",
+              "binary": "1011000101"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "1011000101"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200e54d8949",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200e54d8949",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 3847063881,
+              "m_tmsi_hex": "0xe54d8949",
+              "complete_s_tmsi_hex": "00e54d8949",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "e54d8949"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 3847063881 (0xe54d8949)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 3847063881 (0xe54d8949)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 3847063881 (0xe54d8949)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510d932",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 55602,
+                "tac_hex": "0xd932",
+                "tai_hex": "06f510d932"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "9b14",
+          "analyzed_content": {
+            "bits": "1001101100010100",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "9b14",
+            "extended_ue_identity_index_value": 9925,
+            "decimal_value": 9925,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "10011011000101",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 1001 1011 0001 01.. decimal value 9925]",
+              "bit_string": "1001101100010100",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 9925",
+              "formatted_bits": "1001 1011 0001 01..",
+              "binary": "10011011000101"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "10011011000101"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 5,
+      "timestamp": 1737102645.014243,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "downlinkNASTransport",
+        "code": 11,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 65,
+        "ies_count": 3
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "c00599d918",
+          "analyzed_content": {
+            "value": 93968664,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "0599d918",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 93968664,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "8023a8fe",
+          "analyzed_content": {
+            "value": 2337022,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 2337022,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x00",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 26,
+          "name": "NAS-PDU",
+          "criticality": "reject",
+          "length": 37,
+          "value_hex": "2407520003c224807fb62188d3102decbeb78f69106912e6bd4bc8f24c9f3ac103cc5cc4a0",
+          "analyzed_content": {
+            "protocol_discriminator": 4,
+            "security_header_type": 2,
+            "message_type": 7,
+            "nas_length": 37,
+            "has_payload": true,
+            "analysis": {
+              "protocol": "Unknown PD (4)",
+              "message_category": "unknown"
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x00",
+            "value_start": 24,
+            "value_end": 61
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 93968664,
+          "enb_ue_s1ap_id": 2337022
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 6,
+      "timestamp": 1737102645.014244,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "2500",
+          "analyzed_content": {
+            "bits": "0010010100000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "2500",
+            "ue_identity_index_value": 148,
+            "decimal_value": 148,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "0010010100",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 0010 0101 00.. .... decimal value 148]",
+              "bit_string": "0010010100000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 148",
+              "formatted_bits": "0010 0101 00.. ....",
+              "binary": "0010010100"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "0010010100"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200fa2b11ba",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200fa2b11ba",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 4197126586,
+              "m_tmsi_hex": "0xfa2b11ba",
+              "complete_s_tmsi_hex": "00fa2b11ba",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "fa2b11ba"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 4197126586 (0xfa2b11ba)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 4197126586 (0xfa2b11ba)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 4197126586 (0xfa2b11ba)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea7b",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 60027,
+                "tac_hex": "0xea7b",
+                "tai_hex": "06f510ea7b"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "a250",
+          "analyzed_content": {
+            "bits": "1010001001010000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "a250",
+            "extended_ue_identity_index_value": 10388,
+            "decimal_value": 10388,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "10100010010100",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 1010 0010 0101 00.. decimal value 10388]",
+              "bit_string": "1010001001010000",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 10388",
+              "formatted_bits": "1010 0010 0101 00..",
+              "binary": "10100010010100"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "10100010010100"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 8,
+      "timestamp": 1737102645.014259,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "downlinkNASTransport",
+        "code": 11,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 65,
+        "ies_count": 3
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "c005d3478d",
+          "analyzed_content": {
+            "value": 97732493,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "05d3478d",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 97732493,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "80023838",
+          "analyzed_content": {
+            "value": 145464,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 145464,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x00",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 26,
+          "name": "NAS-PDU",
+          "criticality": "reject",
+          "length": 37,
+          "value_hex": "240752019d573572a297f3f572e861952ae2398f104b180ed47165f24c843a0d4d88405da0",
+          "analyzed_content": {
+            "protocol_discriminator": 4,
+            "security_header_type": 2,
+            "message_type": 7,
+            "nas_length": 37,
+            "has_payload": true,
+            "analysis": {
+              "protocol": "Unknown PD (4)",
+              "message_category": "unknown"
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x00",
+            "value_start": 24,
+            "value_end": 61
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 97732493,
+          "enb_ue_s1ap_id": 145464
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 8,
+      "timestamp": 1737102645.014259,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 54,
+        "ies_count": 6
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "6300",
+          "analyzed_content": {
+            "bits": "0110001100000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "6300",
+            "ue_identity_index_value": 396,
+            "decimal_value": 396,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "0110001100",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 0110 0011 00.. .... decimal value 396]",
+              "bit_string": "0110001100000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 396",
+              "formatted_bits": "0110 0011 00.. ....",
+              "binary": "0110001100"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "0110001100"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200fb68e6c1",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200fb68e6c1",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 4217956033,
+              "m_tmsi_hex": "0xfb68e6c1",
+              "complete_s_tmsi_hex": "00fb68e6c1",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "fb68e6c1"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 4217956033 (0xfb68e6c1)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 4217956033 (0xfb68e6c1)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 4217956033 (0xfb68e6c1)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 44,
+          "name": "pagingDRX",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "60",
+          "analyzed_content": {
+            "value": 96,
+            "hex_value": "0x60",
+            "length": 1,
+            "name": "unknown(96)",
+            "drx_cycle": 0,
+            "drx_name": "unknown(96)",
+            "wireshark_format": {
+              "value": 96,
+              "cycle": "0",
+              "name": "unknown(96)"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 29
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510d73d",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 55101,
+                "tac_hex": "0xd73d",
+                "tai_hex": "06f510d73d"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 29,
+            "criticality_byte": "0x40",
+            "value_start": 33,
+            "value_end": 44
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "0630",
+          "analyzed_content": {
+            "bits": "0000011000110000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "0630",
+            "extended_ue_identity_index_value": 396,
+            "decimal_value": 396,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "00000110001100",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 0000 0110 0011 00.. decimal value 396]",
+              "bit_string": "0000011000110000",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 396",
+              "formatted_bits": "0000 0110 0011 00..",
+              "binary": "00000110001100"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "00000110001100"
+          },
+          "debug_info": {
+            "position": 44,
+            "criticality_byte": "0x40",
+            "value_start": 48,
+            "value_end": 50
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 9,
+      "timestamp": 1737102645.014266,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "2500",
+          "analyzed_content": {
+            "bits": "0010010100000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "2500",
+            "ue_identity_index_value": 148,
+            "decimal_value": 148,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "0010010100",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 0010 0101 00.. .... decimal value 148]",
+              "bit_string": "0010010100000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 148",
+              "formatted_bits": "0010 0101 00.. ....",
+              "binary": "0010010100"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "0010010100"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200fa2b11ba",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200fa2b11ba",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 4197126586,
+              "m_tmsi_hex": "0xfa2b11ba",
+              "complete_s_tmsi_hex": "00fa2b11ba",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "fa2b11ba"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 4197126586 (0xfa2b11ba)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 4197126586 (0xfa2b11ba)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 4197126586 (0xfa2b11ba)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea7b",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 60027,
+                "tac_hex": "0xea7b",
+                "tai_hex": "06f510ea7b"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "a250",
+          "analyzed_content": {
+            "bits": "1010001001010000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "a250",
+            "extended_ue_identity_index_value": 10388,
+            "decimal_value": 10388,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "10100010010100",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 1010 0010 0101 00.. decimal value 10388]",
+              "bit_string": "1010001001010000",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 10388",
+              "formatted_bits": "1010 0010 0101 00..",
+              "binary": "10100010010100"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "10100010010100"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 11,
+      "timestamp": 1737102645.014283,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "downlinkNASTransport",
+        "code": 11,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 38,
+        "ies_count": 3
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "c0053d4135",
+          "analyzed_content": {
+            "value": 87900469,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "053d4135",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 87900469,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "8018edba",
+          "analyzed_content": {
+            "value": 1633722,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 1633722,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x00",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 26,
+          "name": "NAS-PDU",
+          "criticality": "reject",
+          "length": 10,
+          "value_hex": "092783dad41001c8096e",
+          "analyzed_content": {
+            "protocol_discriminator": 9,
+            "security_header_type": 0,
+            "message_type": 39,
+            "nas_length": 10,
+            "has_payload": true,
+            "analysis": {
+              "protocol": "Unknown PD (9)",
+              "message_category": "unknown"
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x00",
+            "value_start": 24,
+            "value_end": 34
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 87900469,
+          "enb_ue_s1ap_id": 1633722
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 12,
+      "timestamp": 1737102645.014291,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "06c0",
+          "analyzed_content": {
+            "bits": "0000011011000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "06c0",
+            "ue_identity_index_value": 27,
+            "decimal_value": 27,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "0000011011",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 0000 0110 11.. .... decimal value 27]",
+              "bit_string": "0000011011000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 27",
+              "formatted_bits": "0000 0110 11.. ....",
+              "binary": "0000011011"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "0000011011"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200cd3f7820",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200cd3f7820",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 3443488800,
+              "m_tmsi_hex": "0xcd3f7820",
+              "complete_s_tmsi_hex": "00cd3f7820",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "cd3f7820"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 3443488800 (0xcd3f7820)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 3443488800 (0xcd3f7820)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 3443488800 (0xcd3f7820)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510d8cd",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 55501,
+                "tac_hex": "0xd8cd",
+                "tai_hex": "06f510d8cd"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "306c",
+          "analyzed_content": {
+            "bits": "0011000001101100",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "306c",
+            "extended_ue_identity_index_value": 3099,
+            "decimal_value": 3099,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "00110000011011",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 0011 0000 0110 11.. decimal value 3099]",
+              "bit_string": "0011000001101100",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 3099",
+              "formatted_bits": "0011 0000 0110 11..",
+              "binary": "00110000011011"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "00110000011011"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 13,
+      "timestamp": 1737102645.014309,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "2500",
+          "analyzed_content": {
+            "bits": "0010010100000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "2500",
+            "ue_identity_index_value": 148,
+            "decimal_value": 148,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "0010010100",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 0010 0101 00.. .... decimal value 148]",
+              "bit_string": "0010010100000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 148",
+              "formatted_bits": "0010 0101 00.. ....",
+              "binary": "0010010100"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "0010010100"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200fa2b11ba",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200fa2b11ba",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 4197126586,
+              "m_tmsi_hex": "0xfa2b11ba",
+              "complete_s_tmsi_hex": "00fa2b11ba",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "fa2b11ba"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 4197126586 (0xfa2b11ba)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 4197126586 (0xfa2b11ba)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 4197126586 (0xfa2b11ba)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea7b",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 60027,
+                "tac_hex": "0xea7b",
+                "tai_hex": "06f510ea7b"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "a250",
+          "analyzed_content": {
+            "bits": "1010001001010000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "a250",
+            "extended_ue_identity_index_value": 10388,
+            "decimal_value": 10388,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "10100010010100",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 1010 0010 0101 00.. decimal value 10388]",
+              "bit_string": "1010001001010000",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 10388",
+              "formatted_bits": "1010 0010 0101 00..",
+              "binary": "10100010010100"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "10100010010100"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 14,
+      "timestamp": 1737102645.01431,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "2500",
+          "analyzed_content": {
+            "bits": "0010010100000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "2500",
+            "ue_identity_index_value": 148,
+            "decimal_value": 148,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "0010010100",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 0010 0101 00.. .... decimal value 148]",
+              "bit_string": "0010010100000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 148",
+              "formatted_bits": "0010 0101 00.. ....",
+              "binary": "0010010100"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "0010010100"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200fa2b11ba",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200fa2b11ba",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 4197126586,
+              "m_tmsi_hex": "0xfa2b11ba",
+              "complete_s_tmsi_hex": "00fa2b11ba",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "fa2b11ba"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 4197126586 (0xfa2b11ba)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 4197126586 (0xfa2b11ba)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 4197126586 (0xfa2b11ba)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea7b",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 60027,
+                "tac_hex": "0xea7b",
+                "tai_hex": "06f510ea7b"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "a250",
+          "analyzed_content": {
+            "bits": "1010001001010000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "a250",
+            "extended_ue_identity_index_value": 10388,
+            "decimal_value": 10388,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "10100010010100",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 1010 0010 0101 00.. decimal value 10388]",
+              "bit_string": "1010001001010000",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 10388",
+              "formatted_bits": "1010 0010 0101 00..",
+              "binary": "10100010010100"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "10100010010100"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 15,
+      "timestamp": 1737102645.014316,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "fa00",
+          "analyzed_content": {
+            "bits": "1111101000000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "fa00",
+            "ue_identity_index_value": 1000,
+            "decimal_value": 1000,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "1111101000",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 1111 1010 00.. .... decimal value 1000]",
+              "bit_string": "1111101000000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 1000",
+              "formatted_bits": "1111 1010 00.. ....",
+              "binary": "1111101000"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "1111101000"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200d36752ed",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200d36752ed",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 3546764013,
+              "m_tmsi_hex": "0xd36752ed",
+              "complete_s_tmsi_hex": "00d36752ed",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "d36752ed"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 3546764013 (0xd36752ed)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 3546764013 (0xd36752ed)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 3546764013 (0xd36752ed)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea76",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 60022,
+                "tac_hex": "0xea76",
+                "tai_hex": "06f510ea76"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "4fa0",
+          "analyzed_content": {
+            "bits": "0100111110100000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "4fa0",
+            "extended_ue_identity_index_value": 5096,
+            "decimal_value": 5096,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "01001111101000",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 0100 1111 1010 00.. decimal value 5096]",
+              "bit_string": "0100111110100000",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 5096",
+              "formatted_bits": "0100 1111 1010 00..",
+              "binary": "01001111101000"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "01001111101000"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 16,
+      "timestamp": 1737102645.014317,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "fa00",
+          "analyzed_content": {
+            "bits": "1111101000000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "fa00",
+            "ue_identity_index_value": 1000,
+            "decimal_value": 1000,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "1111101000",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 1111 1010 00.. .... decimal value 1000]",
+              "bit_string": "1111101000000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 1000",
+              "formatted_bits": "1111 1010 00.. ....",
+              "binary": "1111101000"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "1111101000"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200d36752ed",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200d36752ed",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 3546764013,
+              "m_tmsi_hex": "0xd36752ed",
+              "complete_s_tmsi_hex": "00d36752ed",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "d36752ed"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 3546764013 (0xd36752ed)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 3546764013 (0xd36752ed)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 3546764013 (0xd36752ed)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea76",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 60022,
+                "tac_hex": "0xea76",
+                "tai_hex": "06f510ea76"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "4fa0",
+          "analyzed_content": {
+            "bits": "0100111110100000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "4fa0",
+            "extended_ue_identity_index_value": 5096,
+            "decimal_value": 5096,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "01001111101000",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 0100 1111 1010 00.. decimal value 5096]",
+              "bit_string": "0100111110100000",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 5096",
+              "formatted_bits": "0100 1111 1010 00..",
+              "binary": "01001111101000"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "01001111101000"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 18,
+      "timestamp": 1737102645.014322,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "InitialContextSetup",
+        "code": 9,
+        "type": "SuccessfulOutcome",
+        "criticality": "reject"
+      },
+      "size": {
+        "raw_bytes": 42,
+        "ies_count": 3
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 4,
+          "value_hex": "80f004aa",
+          "analyzed_content": {
+            "value": 2163213482,
+            "length": 4,
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 2163213482,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 11
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 4,
+          "value_hex": "800a3f5a",
+          "analyzed_content": {
+            "value": 671578,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 671578,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 11,
+            "criticality_byte": "0x40",
+            "value_start": 15,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 51,
+          "name": "E-RABSetupListCtxtSURes",
+          "criticality": "ignore",
+          "length": 15,
+          "value_hex": "000032400a0a1f0a4961ba12ce303c",
+          "analyzed_content": {
+            "type": "E-RABSetupListCtxtSURes",
+            "erab_count": 1,
+            "erab_items": [
+              {
+                "e_rab_id": 5,
+                "transport_layer_address": {
+                  "ip_address": "10.10.31.10",
+                  "bit_length": 32,
+                  "hex_value": "61ba12ce",
+                  "decimal_value": 1639584462
+                },
+                "gtp_teid": {
+                  "value": 1231141394,
+                  "hex": "4961ba12"
+                },
+                "wireshark_format": {
+                  "e_rab_id": "e-RAB-ID: 5",
+                  "transport_address": "transportLayerAddress: 10.10.31.10 [bit length 32]",
+                  "gtp_teid": "gTP-TEID: 4961ba12"
+                },
+                "debug_info": {
+                  "full_hex": "000032400a0a1f0a4961ba12ce303c",
+                  "parsed_ip_offset": 7,
+                  "structure_analysis": "E-RABSetupItemCtxtSURes"
+                }
+              }
+            ],
+            "total_length": 15,
+            "wireshark_compatible": true,
+            "decoder_type": "enhanced_erab_setup_list",
+            "raw_analysis": {
+              "hex_data": "000032400a0a1f0a4961ba12ce303c",
+              "length": 15,
+              "structure": "SEQUENCE OF E-RABSetupItemCtxtSURes"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 38
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 2163213482,
+          "enb_ue_s1ap_id": 671578
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 22,
+      "timestamp": 1737102645.014338,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "b140",
+          "analyzed_content": {
+            "bits": "1011000101000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "b140",
+            "ue_identity_index_value": 709,
+            "decimal_value": 709,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "1011000101",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 1011 0001 01.. .... decimal value 709]",
+              "bit_string": "1011000101000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 709",
+              "formatted_bits": "1011 0001 01.. ....",
+              "binary": "1011000101"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "1011000101"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200e54d8949",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200e54d8949",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 3847063881,
+              "m_tmsi_hex": "0xe54d8949",
+              "complete_s_tmsi_hex": "00e54d8949",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "e54d8949"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 3847063881 (0xe54d8949)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 3847063881 (0xe54d8949)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 3847063881 (0xe54d8949)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510d932",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 55602,
+                "tac_hex": "0xd932",
+                "tai_hex": "06f510d932"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "9b14",
+          "analyzed_content": {
+            "bits": "1001101100010100",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "9b14",
+            "extended_ue_identity_index_value": 9925,
+            "decimal_value": 9925,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "10011011000101",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 1001 1011 0001 01.. decimal value 9925]",
+              "bit_string": "1001101100010100",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 9925",
+              "formatted_bits": "1001 1011 0001 01..",
+              "binary": "10011011000101"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "10011011000101"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 23,
+      "timestamp": 1737102645.014338,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "UEContextRelease",
+        "code": 23,
+        "type": "SuccessfulOutcome",
+        "criticality": "reject"
+      },
+      "size": {
+        "raw_bytes": 24,
+        "ies_count": 2
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 5,
+          "value_hex": "c003f1d4e3",
+          "analyzed_content": {
+            "value": 66180323,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "03f1d4e3",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 66180323,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 4,
+          "value_hex": "8022b2a1",
+          "analyzed_content": {
+            "value": 2273953,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 2273953,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x40",
+            "value_start": 16,
+            "value_end": 20
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 66180323,
+          "enb_ue_s1ap_id": 2273953
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 24,
+      "timestamp": 1737102645.01434,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "fa00",
+          "analyzed_content": {
+            "bits": "1111101000000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "fa00",
+            "ue_identity_index_value": 1000,
+            "decimal_value": 1000,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "1111101000",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 1111 1010 00.. .... decimal value 1000]",
+              "bit_string": "1111101000000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 1000",
+              "formatted_bits": "1111 1010 00.. ....",
+              "binary": "1111101000"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "1111101000"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200d36752ed",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200d36752ed",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 3546764013,
+              "m_tmsi_hex": "0xd36752ed",
+              "complete_s_tmsi_hex": "00d36752ed",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "d36752ed"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 3546764013 (0xd36752ed)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 3546764013 (0xd36752ed)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 3546764013 (0xd36752ed)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea76",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 60022,
+                "tac_hex": "0xea76",
+                "tai_hex": "06f510ea76"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "4fa0",
+          "analyzed_content": {
+            "bits": "0100111110100000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "4fa0",
+            "extended_ue_identity_index_value": 5096,
+            "decimal_value": 5096,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "01001111101000",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 0100 1111 1010 00.. decimal value 5096]",
+              "bit_string": "0100111110100000",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 5096",
+              "formatted_bits": "0100 1111 1010 00..",
+              "binary": "01001111101000"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "01001111101000"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 25,
+      "timestamp": 1737102645.014346,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "InitialContextSetup",
+        "code": 9,
+        "type": "SuccessfulOutcome",
+        "criticality": "reject"
+      },
+      "size": {
+        "raw_bytes": 43,
+        "ies_count": 3
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 5,
+          "value_hex": "c008f959ce",
+          "analyzed_content": {
+            "value": 150559182,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "08f959ce",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 150559182,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 4,
+          "value_hex": "8018b7fc",
+          "analyzed_content": {
+            "value": 1619964,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 1619964,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x40",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 51,
+          "name": "E-RABSetupListCtxtSURes",
+          "criticality": "ignore",
+          "length": 15,
+          "value_hex": "000032400a0a1f0a49c946534846e2",
+          "analyzed_content": {
+            "type": "E-RABSetupListCtxtSURes",
+            "erab_count": 1,
+            "erab_items": [
+              {
+                "e_rab_id": 5,
+                "transport_layer_address": {
+                  "ip_address": "10.10.31.10",
+                  "bit_length": 32,
+                  "hex_value": "c9465348",
+                  "decimal_value": 3376829256
+                },
+                "gtp_teid": {
+                  "value": 1237927507,
+                  "hex": "49c94653"
+                },
+                "wireshark_format": {
+                  "e_rab_id": "e-RAB-ID: 5",
+                  "transport_address": "transportLayerAddress: 10.10.31.10 [bit length 32]",
+                  "gtp_teid": "gTP-TEID: 49c94653"
+                },
+                "debug_info": {
+                  "full_hex": "000032400a0a1f0a49c946534846e2",
+                  "parsed_ip_offset": -1,
+                  "structure_analysis": "E-RABSetupItemCtxtSURes"
+                }
+              }
+            ],
+            "total_length": 15,
+            "wireshark_compatible": true,
+            "decoder_type": "enhanced_erab_setup_list",
+            "raw_analysis": {
+              "hex_data": "000032400a0a1f0a49c946534846e2",
+              "length": 15,
+              "structure": "SEQUENCE OF E-RABSetupItemCtxtSURes"
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x40",
+            "value_start": 24,
+            "value_end": 39
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 150559182,
+          "enb_ue_s1ap_id": 1619964
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 26,
+      "timestamp": 1737102645.014356,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "CellTrafficTrace",
+        "code": 42,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 57,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "80f004aa",
+          "analyzed_content": {
+            "value": 2163213482,
+            "length": 4,
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 2163213482,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 11
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "800a3f5a",
+          "analyzed_content": {
+            "value": 671578,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 671578,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 11,
+            "criticality_byte": "0x00",
+            "value_start": 15,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 86,
+          "name": "E-UTRAN-Trace-ID",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "06f5100001318da0",
+          "analyzed_content": {
+            "length": 8,
+            "hex_value": "06f5100001318da0",
+            "trace_id": {
+              "total_length": 8,
+              "hex_value": "06f5100001318da0",
+              "plmn_identity": {
+                "mcc": 605,
+                "mnc": 1,
+                "mnc_digits": 2,
+                "plmn_hex": "06f510",
+                "readable": "605-01",
+                "bcd_breakdown": {
+                  "mcc_digits": [
+                    6,
+                    0,
+                    5
+                  ],
+                  "mnc_digits": [
+                    0,
+                    1
+                  ]
+                }
+              },
+              "trace_id": {
+                "value": 305,
+                "hex": "0x000131",
+                "bytes": "000131"
+              },
+              "trace_recording_session_reference": {
+                "value": 36256,
+                "hex": "0x8da0",
+                "bytes": "8da0"
+              },
+              "wireshark_format": {
+                "plmn_identity": "605-01",
+                "mobile_country_code": "Tunisia (605)",
+                "mobile_network_code": "Orange (01)",
+                "trace_id": "0x000131",
+                "trace_recording_session_reference": "0x8da0"
+              },
+              "network_info": {
+                "country": "Tunisia",
+                "operator": "Orange",
+                "iso_code": "TN",
+                "country_code": "216",
+                "source": "mcc_mnc_table_exact",
+                "mcc_mnc": "605-01",
+                "lookup_method": "exact_match_mnc_01"
+              }
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 31
+          }
+        },
+        {
+          "id": 100,
+          "name": "EUTRAN-CGI",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "0006f51000131040",
+          "analyzed_content": {
+            "plmn": {
+              "mcc": "605",
+              "mnc": "01",
+              "plmn_id": "605-01",
+              "operator": "Orange Tunisia"
+            },
+            "cell_id": 1249344,
+            "cell_id_hex": "0x0131040",
+            "enb_id": 4880,
+            "enb_id_hex": "0x01310",
+            "cell_identity": 64,
+            "cgi_string": "605-01-01310-40",
+            "network_info": {
+              "operator": "Orange Tunisia",
+              "enb_type": "Small Cell"
+            }
+          },
+          "debug_info": {
+            "position": 31,
+            "criticality_byte": "0x40",
+            "value_start": 35,
+            "value_end": 43
+          }
+        },
+        {
+          "id": 131,
+          "name": "TraceCollectionEntityIPAddress",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0f800a081914",
+          "analyzed_content": {
+            "bits": "000011111000000000001010000010000001100100010100",
+            "length_bits": 48,
+            "length_bytes": 6,
+            "hex_value": "0f800a081914"
+          },
+          "debug_info": {
+            "position": 43,
+            "criticality_byte": "0x40",
+            "value_start": 47,
+            "value_end": 53
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 2163213482,
+          "enb_ue_s1ap_id": 671578
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 27,
+      "timestamp": 1737102645.014356,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "initialUEMessage",
+        "code": 12,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 61,
+        "ies_count": 6
+      },
+      "ies": [
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "800bc58d",
+          "analyzed_content": {
+            "value": 771469,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 771469,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 11
+          }
+        },
+        {
+          "id": 26,
+          "name": "NAS-PDU",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "04c7831997",
+          "analyzed_content": {
+            "protocol_discriminator": 4,
+            "security_header_type": 0,
+            "message_type": 199,
+            "nas_length": 5,
+            "has_payload": true,
+            "analysis": {
+              "protocol": "Unknown PD (4)",
+              "message_category": "unknown"
+            }
+          },
+          "debug_info": {
+            "position": 11,
+            "criticality_byte": "0x00",
+            "value_start": 15,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 67,
+          "name": "TAI",
+          "criticality": "reject",
+          "length": 6,
+          "value_hex": "0006f510ea64",
+          "analyzed_content": {
+            "type": "sequence",
+            "length": 6,
+            "hex_value": "0006f510ea64",
+            "plmn_identity": {
+              "mcc": 605,
+              "mnc": 1,
+              "mnc_digits": 2,
+              "plmn_hex": "06f510",
+              "readable": "605-01",
+              "bcd_breakdown": {
+                "mcc_digits": [
+                  6,
+                  0,
+                  5
+                ],
+                "mnc_digits": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "tracking_area_code": 60004,
+            "tac_hex": "0xea64",
+            "complete_tai_hex": "06f510ea64",
+            "network_info": {
+              "country": "Tunisia",
+              "operator": "Orange",
+              "iso_code": "TN",
+              "country_code": "216",
+              "source": "mcc_mnc_table_exact",
+              "mcc_mnc": "605-01",
+              "lookup_method": "exact_match_mnc_01"
+            },
+            "wireshark_format": {
+              "mobile_country_code": "Tunisia (605)",
+              "mobile_network_code": "Orange (1)",
+              "tac": "60004 (0xea64)"
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x00",
+            "value_start": 24,
+            "value_end": 30
+          }
+        },
+        {
+          "id": 100,
+          "name": "EUTRAN-CGI",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "0006f510189a5350",
+          "analyzed_content": {
+            "plmn": {
+              "mcc": "605",
+              "mnc": "01",
+              "plmn_id": "605-01",
+              "operator": "Orange Tunisia"
+            },
+            "cell_id": 144331600,
+            "cell_id_hex": "0x89a5350",
+            "enb_id": 563795,
+            "enb_id_hex": "0x89a53",
+            "cell_identity": 80,
+            "cgi_string": "605-01-89a53-50",
+            "network_info": {
+              "operator": "Orange Tunisia",
+              "enb_type": "Unknown"
+            }
+          },
+          "debug_info": {
+            "position": 30,
+            "criticality_byte": "0x40",
+            "value_start": 34,
+            "value_end": 42
+          }
+        },
+        {
+          "id": 134,
+          "name": "RRC-Establishment-Cause",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "20",
+          "analyzed_content": {
+            "value": 32,
+            "hex_value": "0x20",
+            "length": 1,
+            "name": "unknown(32)"
+          },
+          "debug_info": {
+            "position": 42,
+            "criticality_byte": "0x40",
+            "value_start": 46,
+            "value_end": 47
+          }
+        },
+        {
+          "id": 96,
+          "name": "S-TMSI",
+          "criticality": "reject",
+          "length": 6,
+          "value_hex": "0800c9ec9409",
+          "analyzed_content": {
+            "type": "sequence",
+            "length": 6,
+            "hex_value": "0800c9ec9409",
+            "mme_code": 0,
+            "mme_code_hex": "0x00",
+            "m_tmsi": 3387724809,
+            "m_tmsi_hex": "0xc9ec9409",
+            "complete_s_tmsi_hex": "00c9ec9409",
+            "wireshark_format": {
+              "mmec": "0 (0x00)",
+              "m_tmsi": "3387724809 (0xc9ec9409)"
+            }
+          },
+          "debug_info": {
+            "position": 47,
+            "criticality_byte": "0x00",
+            "value_start": 51,
+            "value_end": 57
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": 771469
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 31,
+      "timestamp": 1737102645.014389,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "initialUEMessage",
+        "code": 12,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 61,
+        "ies_count": 6
+      },
+      "ies": [
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "8017fcd7",
+          "analyzed_content": {
+            "value": 1572055,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 1572055,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 11
+          }
+        },
+        {
+          "id": 26,
+          "name": "NAS-PDU",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "04c7467bb1",
+          "analyzed_content": {
+            "protocol_discriminator": 4,
+            "security_header_type": 0,
+            "message_type": 199,
+            "nas_length": 5,
+            "has_payload": true,
+            "analysis": {
+              "protocol": "Unknown PD (4)",
+              "message_category": "unknown"
+            }
+          },
+          "debug_info": {
+            "position": 11,
+            "criticality_byte": "0x00",
+            "value_start": 15,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 67,
+          "name": "TAI",
+          "criticality": "reject",
+          "length": 6,
+          "value_hex": "0006f5102714",
+          "analyzed_content": {
+            "type": "sequence",
+            "length": 6,
+            "hex_value": "0006f5102714",
+            "plmn_identity": {
+              "mcc": 605,
+              "mnc": 1,
+              "mnc_digits": 2,
+              "plmn_hex": "06f510",
+              "readable": "605-01",
+              "bcd_breakdown": {
+                "mcc_digits": [
+                  6,
+                  0,
+                  5
+                ],
+                "mnc_digits": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "tracking_area_code": 10004,
+            "tac_hex": "0x2714",
+            "complete_tai_hex": "06f5102714",
+            "network_info": {
+              "country": "Tunisia",
+              "operator": "Orange",
+              "iso_code": "TN",
+              "country_code": "216",
+              "source": "mcc_mnc_table_exact",
+              "mcc_mnc": "605-01",
+              "lookup_method": "exact_match_mnc_01"
+            },
+            "wireshark_format": {
+              "mobile_country_code": "Tunisia (605)",
+              "mobile_network_code": "Orange (1)",
+              "tac": "10004 (0x2714)"
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x00",
+            "value_start": 24,
+            "value_end": 30
+          }
+        },
+        {
+          "id": 100,
+          "name": "EUTRAN-CGI",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "0006f510000de090",
+          "analyzed_content": {
+            "plmn": {
+              "mcc": "605",
+              "mnc": "01",
+              "plmn_id": "605-01",
+              "operator": "Orange Tunisia"
+            },
+            "cell_id": 909456,
+            "cell_id_hex": "0x00de090",
+            "enb_id": 3552,
+            "enb_id_hex": "0x00de0",
+            "cell_identity": 144,
+            "cgi_string": "605-01-00de0-90",
+            "network_info": {
+              "operator": "Orange Tunisia",
+              "enb_type": "Macro eNB"
+            }
+          },
+          "debug_info": {
+            "position": 30,
+            "criticality_byte": "0x40",
+            "value_start": 34,
+            "value_end": 42
+          }
+        },
+        {
+          "id": 134,
+          "name": "RRC-Establishment-Cause",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "20",
+          "analyzed_content": {
+            "value": 32,
+            "hex_value": "0x20",
+            "length": 1,
+            "name": "unknown(32)"
+          },
+          "debug_info": {
+            "position": 42,
+            "criticality_byte": "0x40",
+            "value_start": 46,
+            "value_end": 47
+          }
+        },
+        {
+          "id": 96,
+          "name": "S-TMSI",
+          "criticality": "reject",
+          "length": 6,
+          "value_hex": "0800d91f2689",
+          "analyzed_content": {
+            "type": "sequence",
+            "length": 6,
+            "hex_value": "0800d91f2689",
+            "mme_code": 0,
+            "mme_code_hex": "0x00",
+            "m_tmsi": 3642697353,
+            "m_tmsi_hex": "0xd91f2689",
+            "complete_s_tmsi_hex": "00d91f2689",
+            "wireshark_format": {
+              "mmec": "0 (0x00)",
+              "m_tmsi": "3642697353 (0xd91f2689)"
+            }
+          },
+          "debug_info": {
+            "position": 47,
+            "criticality_byte": "0x00",
+            "value_start": 51,
+            "value_end": 57
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": 1572055
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 34,
+      "timestamp": 1737102645.014401,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "b140",
+          "analyzed_content": {
+            "bits": "1011000101000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "b140",
+            "ue_identity_index_value": 709,
+            "decimal_value": 709,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "1011000101",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 1011 0001 01.. .... decimal value 709]",
+              "bit_string": "1011000101000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 709",
+              "formatted_bits": "1011 0001 01.. ....",
+              "binary": "1011000101"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "1011000101"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200e54d8949",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200e54d8949",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 3847063881,
+              "m_tmsi_hex": "0xe54d8949",
+              "complete_s_tmsi_hex": "00e54d8949",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "e54d8949"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 3847063881 (0xe54d8949)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 3847063881 (0xe54d8949)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 3847063881 (0xe54d8949)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510d932",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 55602,
+                "tac_hex": "0xd932",
+                "tai_hex": "06f510d932"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "9b14",
+          "analyzed_content": {
+            "bits": "1001101100010100",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "9b14",
+            "extended_ue_identity_index_value": 9925,
+            "decimal_value": 9925,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "10011011000101",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 1001 1011 0001 01.. decimal value 9925]",
+              "bit_string": "1001101100010100",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 9925",
+              "formatted_bits": "1001 1011 0001 01..",
+              "binary": "10011011000101"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "10011011000101"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 34,
+      "timestamp": 1737102645.014401,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "InitialContextSetup",
+        "code": 9,
+        "type": "InitiatingMessage",
+        "criticality": "reject"
+      },
+      "size": {
+        "raw_bytes": 251,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 62976,
+          "name": "Unknown-62976",
+          "criticality": "reject",
+          "length": 10,
+          "value_hex": "00000005c00a71dbe000",
+          "analyzed_content": {
+            "raw_value": "00000005c00a71dbe000"
+          },
+          "debug_info": {
+            "position": 0,
+            "criticality_byte": "0x00",
+            "value_start": 4,
+            "value_end": 14
+          }
+        },
+        {
+          "id": 2048,
+          "name": "Unknown-2048",
+          "criticality": "reject",
+          "length": 128,
+          "value_hex": "033b3a0042000a1811e1a3006008f0d18000180013000034000e050008040f800a0520514bed4cbe006b00051c000e000000490020bb127f8f87bd38ae950dd85a769142618d937264f3b492cd43c73d630562c3a30029400b0406f51000000105400100004a406c6b034a0303ccd9a044001060e4c244f87f13e1fc4f87f13e",
+          "analyzed_content": {
+            "raw_value": "033b3a0042000a1811e1a3006008f0d18000180013000034000e050008040f800a0520514bed4cbe006b00051c000e000000490020bb127f8f87bd38ae950dd85a769142618d937264f3b492cd43c73d630562c3a30029400b0406f51000000105400100004a406c6b034a0303ccd9a044001060e4c244f87f13e1fc4f87f13e"
+          },
+          "debug_info": {
+            "position": 14,
+            "criticality_byte": "0x04",
+            "value_start": 18,
+            "value_end": 146
+          }
+        },
+        {
+          "id": 4112,
+          "name": "Unknown-4112",
+          "criticality": "reject",
+          "length": 19,
+          "value_hex": "a533bf0b9c080000079bee000000004a9713fd",
+          "analyzed_content": {
+            "raw_value": "a533bf0b9c080000079bee000000004a9713fd"
+          },
+          "debug_info": {
+            "position": 154,
+            "criticality_byte": "0x1c",
+            "value_start": 158,
+            "value_end": 177
+          }
+        },
+        {
+          "id": 16512,
+          "name": "Unknown-16512",
+          "criticality": "reject",
+          "length": 24,
+          "value_hex": "a20042500008020f33035758b2611434e081001236800131",
+          "analyzed_content": {
+            "raw_value": "a20042500008020f33035758b2611434e081001236800131"
+          },
+          "debug_info": {
+            "position": 177,
+            "criticality_byte": "0x00",
+            "value_start": 181,
+            "value_end": 205
+          }
+        },
+        {
+          "id": 45657,
+          "name": "Unknown-45657",
+          "criticality": "ignore",
+          "length": 32,
+          "value_hex": "06000a80000ce296321003000540000400007c40010000c040083594035328ff",
+          "analyzed_content": {
+            "raw_value": "06000a80000ce296321003000540000400007c40010000c040083594035328ff"
+          },
+          "debug_info": {
+            "position": 209,
+            "criticality_byte": "0x64",
+            "value_start": 213,
+            "value_end": 245
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": true,
+        "error_count": 3,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 34,
+      "timestamp": 1737102645.014401,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "InitialContextSetup",
+        "code": 9,
+        "type": "InitiatingMessage",
+        "criticality": "reject"
+      },
+      "size": {
+        "raw_bytes": 250,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 62720,
+          "name": "Unknown-62720",
+          "criticality": "reject",
+          "length": 10,
+          "value_hex": "00000005c00afa4beb00",
+          "analyzed_content": {
+            "raw_value": "00000005c00afa4beb00"
+          },
+          "debug_info": {
+            "position": 0,
+            "criticality_byte": "0x00",
+            "value_start": 4,
+            "value_end": 14
+          }
+        },
+        {
+          "id": 2048,
+          "name": "Unknown-2048",
+          "criticality": "reject",
+          "length": 128,
+          "value_hex": "0e33f20042000a1811e1a3006008f0d18000180013000034000e050008040f800a0520511278f9f0006b00051c000e000000490020251dd561ee9e2ba1febd11aa25c87f32b179109bade6a0bbf3df5557322ac72e0029400b0406f51000000105400100004a406b6a034203032c9980044c1000c1c244f8dfe27c6ff13e37f8",
+          "analyzed_content": {
+            "raw_value": "0e33f20042000a1811e1a3006008f0d18000180013000034000e050008040f800a0520511278f9f0006b00051c000e000000490020251dd561ee9e2ba1febd11aa25c87f32b179109bade6a0bbf3df5557322ac72e0029400b0406f51000000105400100004a406b6a034203032c9980044c1000c1c244f8dfe27c6ff13e37f8"
+          },
+          "debug_info": {
+            "position": 14,
+            "criticality_byte": "0x04",
+            "value_start": 18,
+            "value_end": 146
+          }
+        },
+        {
+          "id": 40731,
+          "name": "Unknown-40731",
+          "criticality": "unknown",
+          "length": 79,
+          "value_hex": "8dfdff3ffaea204011c329d2a4881c1630000000002a8008000180020f33035758a6601404e28810f1a165003211b93432b2596621e700098000378718cc43ce00130000690cb198879c0026000080",
+          "analyzed_content": {
+            "raw_value": "8dfdff3ffaea204011c329d2a4881c1630000000002a8008000180020f33035758a6601404e28810f1a165003211b93432b2596621e700098000378718cc43ce00130000690cb198879c0026000080"
+          },
+          "debug_info": {
+            "position": 146,
+            "criticality_byte": "0xfc",
+            "value_start": 150,
+            "value_end": 229
+          }
+        },
+        {
+          "id": 124,
+          "name": "SRVCCOperationPossible",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "possible"
+          },
+          "debug_info": {
+            "position": 229,
+            "criticality_byte": "0x40",
+            "value_start": 233,
+            "value_end": 234
+          }
+        },
+        {
+          "id": 192,
+          "name": "Masked-IMEISV",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "3592010800ffff09",
+          "analyzed_content": {
+            "bits": "0011010110010010000000010000100000000000111111111111111100001001",
+            "length_bits": 64,
+            "length_bytes": 8,
+            "hex_value": "3592010800ffff09"
+          },
+          "debug_info": {
+            "position": 234,
+            "criticality_byte": "0x40",
+            "value_start": 238,
+            "value_end": 246
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 35,
+      "timestamp": 1737102645.014401,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "UEContextRelease",
+        "code": 23,
+        "type": "SuccessfulOutcome",
+        "criticality": "reject"
+      },
+      "size": {
+        "raw_bytes": 24,
+        "ies_count": 2
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 5,
+          "value_hex": "c002175b44",
+          "analyzed_content": {
+            "value": 35085124,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "02175b44",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 35085124,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 4,
+          "value_hex": "800458ed",
+          "analyzed_content": {
+            "value": 284909,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 284909,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x40",
+            "value_start": 16,
+            "value_end": 20
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 35085124,
+          "enb_ue_s1ap_id": 284909
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 36,
+      "timestamp": 1737102645.014409,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "InitialContextSetup",
+        "code": 9,
+        "type": "SuccessfulOutcome",
+        "criticality": "reject"
+      },
+      "size": {
+        "raw_bytes": 71,
+        "ies_count": 3
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 5,
+          "value_hex": "c00a336ca6",
+          "analyzed_content": {
+            "value": 171142310,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "0a336ca6",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 171142310,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "ignore",
+          "length": 4,
+          "value_hex": "802b7fdc",
+          "analyzed_content": {
+            "value": 2850780,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 2850780,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x40",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 51,
+          "name": "E-RABSetupListCtxtSURes",
+          "criticality": "ignore",
+          "length": 43,
+          "value_hex": "020032400a0c1f0a49a3c6693d49de0032400a0a1f0a49a3c66499cdd80032400a0e1f0a49a3c654795cb1",
+          "analyzed_content": {
+            "type": "E-RABSetupListCtxtSURes",
+            "erab_count": 1,
+            "erab_items": [
+              {
+                "e_rab_id": 5,
+                "transport_layer_address": {
+                  "ip_address": "10.12.31.10",
+                  "bit_length": 32,
+                  "hex_value": "a3c6693d",
+                  "decimal_value": 2747689277
+                },
+                "gtp_teid": {
+                  "value": 1235469929,
+                  "hex": "49a3c669"
+                },
+                "wireshark_format": {
+                  "e_rab_id": "e-RAB-ID: 5",
+                  "transport_address": "transportLayerAddress: 10.12.31.10 [bit length 32]",
+                  "gtp_teid": "gTP-TEID: 49a3c669"
+                },
+                "debug_info": {
+                  "full_hex": "020032400a0c1f0a49a3c6693d49de0032400a0a1f0a49a3c66499cdd80032400a0e1f0a49a3c654795cb1",
+                  "parsed_ip_offset": -1,
+                  "structure_analysis": "E-RABSetupItemCtxtSURes"
+                }
+              }
+            ],
+            "total_length": 43,
+            "wireshark_compatible": true,
+            "decoder_type": "enhanced_erab_setup_list",
+            "raw_analysis": {
+              "hex_data": "020032400a0c1f0a49a3c6693d49de0032400a0a1f0a49a3c66499cdd80032400a0e1f0a49a3c654795cb1",
+              "length": 43,
+              "structure": "SEQUENCE OF E-RABSetupItemCtxtSURes"
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x40",
+            "value_start": 24,
+            "value_end": 67
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 171142310,
+          "enb_ue_s1ap_id": 2850780
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 37,
+      "timestamp": 1737102645.014413,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "fa00",
+          "analyzed_content": {
+            "bits": "1111101000000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "fa00",
+            "ue_identity_index_value": 1000,
+            "decimal_value": 1000,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "1111101000",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 1111 1010 00.. .... decimal value 1000]",
+              "bit_string": "1111101000000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 1000",
+              "formatted_bits": "1111 1010 00.. ....",
+              "binary": "1111101000"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "1111101000"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200d36752ed",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200d36752ed",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 3546764013,
+              "m_tmsi_hex": "0xd36752ed",
+              "complete_s_tmsi_hex": "00d36752ed",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "d36752ed"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 3546764013 (0xd36752ed)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 3546764013 (0xd36752ed)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 3546764013 (0xd36752ed)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea76",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 60022,
+                "tac_hex": "0xea76",
+                "tai_hex": "06f510ea76"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "4fa0",
+          "analyzed_content": {
+            "bits": "0100111110100000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "4fa0",
+            "extended_ue_identity_index_value": 5096,
+            "decimal_value": 5096,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "01001111101000",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 0100 1111 1010 00.. decimal value 5096]",
+              "bit_string": "0100111110100000",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 5096",
+              "formatted_bits": "0100 1111 1010 00..",
+              "binary": "01001111101000"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "01001111101000"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 38,
+      "timestamp": 1737102645.014418,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "CellTrafficTrace",
+        "code": 42,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 58,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "c008f959ce",
+          "analyzed_content": {
+            "value": 150559182,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "08f959ce",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 150559182,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "8018b7fc",
+          "analyzed_content": {
+            "value": 1619964,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 1619964,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x00",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 86,
+          "name": "E-UTRAN-Trace-ID",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "06f510000eb17fbf",
+          "analyzed_content": {
+            "length": 8,
+            "hex_value": "06f510000eb17fbf",
+            "trace_id": {
+              "total_length": 8,
+              "hex_value": "06f510000eb17fbf",
+              "plmn_identity": {
+                "mcc": 605,
+                "mnc": 1,
+                "mnc_digits": 2,
+                "plmn_hex": "06f510",
+                "readable": "605-01",
+                "bcd_breakdown": {
+                  "mcc_digits": [
+                    6,
+                    0,
+                    5
+                  ],
+                  "mnc_digits": [
+                    0,
+                    1
+                  ]
+                }
+              },
+              "trace_id": {
+                "value": 3761,
+                "hex": "0x000eb1",
+                "bytes": "000eb1"
+              },
+              "trace_recording_session_reference": {
+                "value": 32703,
+                "hex": "0x7fbf",
+                "bytes": "7fbf"
+              },
+              "wireshark_format": {
+                "plmn_identity": "605-01",
+                "mobile_country_code": "Tunisia (605)",
+                "mobile_network_code": "Orange (01)",
+                "trace_id": "0x000eb1",
+                "trace_recording_session_reference": "0x7fbf"
+              },
+              "network_info": {
+                "country": "Tunisia",
+                "operator": "Orange",
+                "iso_code": "TN",
+                "country_code": "216",
+                "source": "mcc_mnc_table_exact",
+                "mcc_mnc": "605-01",
+                "lookup_method": "exact_match_mnc_01"
+              }
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x40",
+            "value_start": 24,
+            "value_end": 32
+          }
+        },
+        {
+          "id": 100,
+          "name": "EUTRAN-CGI",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "0006f51000eb1080",
+          "analyzed_content": {
+            "plmn": {
+              "mcc": "605",
+              "mnc": "01",
+              "plmn_id": "605-01",
+              "operator": "Orange Tunisia"
+            },
+            "cell_id": 15405184,
+            "cell_id_hex": "0x0eb1080",
+            "enb_id": 60176,
+            "enb_id_hex": "0x0eb10",
+            "cell_identity": 128,
+            "cgi_string": "605-01-0eb10-80",
+            "network_info": {
+              "operator": "Orange Tunisia",
+              "enb_type": "Small Cell"
+            }
+          },
+          "debug_info": {
+            "position": 32,
+            "criticality_byte": "0x40",
+            "value_start": 36,
+            "value_end": 44
+          }
+        },
+        {
+          "id": 131,
+          "name": "TraceCollectionEntityIPAddress",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0f800a081914",
+          "analyzed_content": {
+            "bits": "000011111000000000001010000010000001100100010100",
+            "length_bits": 48,
+            "length_bytes": 6,
+            "hex_value": "0f800a081914"
+          },
+          "debug_info": {
+            "position": 44,
+            "criticality_byte": "0x40",
+            "value_start": 48,
+            "value_end": 54
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 150559182,
+          "enb_ue_s1ap_id": 1619964
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 40,
+      "timestamp": 1737102645.014426,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "CellTrafficTrace",
+        "code": 42,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 58,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "c00a336ca6",
+          "analyzed_content": {
+            "value": 171142310,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "0a336ca6",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 171142310,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "802b7fdc",
+          "analyzed_content": {
+            "value": 2850780,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 2850780,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x00",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 86,
+          "name": "E-UTRAN-Trace-ID",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "06f5100198e499cb",
+          "analyzed_content": {
+            "length": 8,
+            "hex_value": "06f5100198e499cb",
+            "trace_id": {
+              "total_length": 8,
+              "hex_value": "06f5100198e499cb",
+              "plmn_identity": {
+                "mcc": 605,
+                "mnc": 1,
+                "mnc_digits": 2,
+                "plmn_hex": "06f510",
+                "readable": "605-01",
+                "bcd_breakdown": {
+                  "mcc_digits": [
+                    6,
+                    0,
+                    5
+                  ],
+                  "mnc_digits": [
+                    0,
+                    1
+                  ]
+                }
+              },
+              "trace_id": {
+                "value": 104676,
+                "hex": "0x0198e4",
+                "bytes": "0198e4"
+              },
+              "trace_recording_session_reference": {
+                "value": 39371,
+                "hex": "0x99cb",
+                "bytes": "99cb"
+              },
+              "wireshark_format": {
+                "plmn_identity": "605-01",
+                "mobile_country_code": "Tunisia (605)",
+                "mobile_network_code": "Orange (01)",
+                "trace_id": "0x0198e4",
+                "trace_recording_session_reference": "0x99cb"
+              },
+              "network_info": {
+                "country": "Tunisia",
+                "operator": "Orange",
+                "iso_code": "TN",
+                "country_code": "216",
+                "source": "mcc_mnc_table_exact",
+                "mcc_mnc": "605-01",
+                "lookup_method": "exact_match_mnc_01"
+              }
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x40",
+            "value_start": 24,
+            "value_end": 32
+          }
+        },
+        {
+          "id": 100,
+          "name": "EUTRAN-CGI",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "0006f510198e4340",
+          "analyzed_content": {
+            "plmn": {
+              "mcc": "605",
+              "mnc": "01",
+              "plmn_id": "605-01",
+              "operator": "Orange Tunisia"
+            },
+            "cell_id": 160318272,
+            "cell_id_hex": "0x98e4340",
+            "enb_id": 626243,
+            "enb_id_hex": "0x98e43",
+            "cell_identity": 64,
+            "cgi_string": "605-01-98e43-40",
+            "network_info": {
+              "operator": "Orange Tunisia",
+              "enb_type": "Unknown"
+            }
+          },
+          "debug_info": {
+            "position": 32,
+            "criticality_byte": "0x40",
+            "value_start": 36,
+            "value_end": 44
+          }
+        },
+        {
+          "id": 131,
+          "name": "TraceCollectionEntityIPAddress",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0f800a081914",
+          "analyzed_content": {
+            "bits": "000011111000000000001010000010000001100100010100",
+            "length_bits": 48,
+            "length_bytes": 6,
+            "hex_value": "0f800a081914"
+          },
+          "debug_info": {
+            "position": 44,
+            "criticality_byte": "0x40",
+            "value_start": 48,
+            "value_end": 54
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 171142310,
+          "enb_ue_s1ap_id": 2850780
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 42,
+      "timestamp": 1737102645.014438,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "2500",
+          "analyzed_content": {
+            "bits": "0010010100000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "2500",
+            "ue_identity_index_value": 148,
+            "decimal_value": 148,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "0010010100",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 0010 0101 00.. .... decimal value 148]",
+              "bit_string": "0010010100000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 148",
+              "formatted_bits": "0010 0101 00.. ....",
+              "binary": "0010010100"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "0010010100"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200fa2b11ba",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200fa2b11ba",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 4197126586,
+              "m_tmsi_hex": "0xfa2b11ba",
+              "complete_s_tmsi_hex": "00fa2b11ba",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "fa2b11ba"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 4197126586 (0xfa2b11ba)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 4197126586 (0xfa2b11ba)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 4197126586 (0xfa2b11ba)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510ea7b",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 60027,
+                "tac_hex": "0xea7b",
+                "tai_hex": "06f510ea7b"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "a250",
+          "analyzed_content": {
+            "bits": "1010001001010000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "a250",
+            "extended_ue_identity_index_value": 10388,
+            "decimal_value": 10388,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "10100010010100",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 1010 0010 0101 00.. decimal value 10388]",
+              "bit_string": "1010001001010000",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 10388",
+              "formatted_bits": "1010 0010 0101 00..",
+              "binary": "10100010010100"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "10100010010100"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 43,
+      "timestamp": 1737102645.014447,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "9580",
+          "analyzed_content": {
+            "bits": "1001010110000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "9580",
+            "ue_identity_index_value": 598,
+            "decimal_value": 598,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "1001010110",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 1001 0101 10.. .... decimal value 598]",
+              "bit_string": "1001010110000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 598",
+              "formatted_bits": "1001 0101 10.. ....",
+              "binary": "1001010110"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "1001010110"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200f5d3f3c1",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200f5d3f3c1",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 4124308417,
+              "m_tmsi_hex": "0xf5d3f3c1",
+              "complete_s_tmsi_hex": "00f5d3f3c1",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "f5d3f3c1"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 4124308417 (0xf5d3f3c1)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 4124308417 (0xf5d3f3c1)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 4124308417 (0xf5d3f3c1)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510aca9",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 44201,
+                "tac_hex": "0xaca9",
+                "tai_hex": "06f510aca9"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "f958",
+          "analyzed_content": {
+            "bits": "1111100101011000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "f958",
+            "extended_ue_identity_index_value": 15958,
+            "decimal_value": 15958,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "11111001010110",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 1111 1001 0101 10.. decimal value 15958]",
+              "bit_string": "1111100101011000",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 15958",
+              "formatted_bits": "1111 1001 0101 10..",
+              "binary": "11111001010110"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "11111001010110"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 45,
+      "timestamp": 1737102645.014453,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "Paging",
+        "code": 10,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 49,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 80,
+          "name": "UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "c940",
+          "analyzed_content": {
+            "bits": "1100100101000000",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "c940",
+            "ue_identity_index_value": 805,
+            "decimal_value": 805,
+            "bit_length": 10,
+            "pad_bits": 6,
+            "actual_bits": "1100100101",
+            "padding_bits": "000000",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 10, 6 LSB pad bits, 1100 1001 01.. .... decimal value 805]",
+              "bit_string": "1100100101000000",
+              "bit_length_desc": "bit length 10",
+              "pad_bits_desc": "6 LSB pad bits",
+              "decimal_desc": "decimal value 805",
+              "formatted_bits": "1100 1001 01.. ....",
+              "binary": "1100100101"
+            },
+            "expected_bit_length": 10,
+            "actual_bit_length": 10,
+            "significant_bits": "1100100101"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x40",
+            "value_start": 7,
+            "value_end": 9
+          }
+        },
+        {
+          "id": 43,
+          "name": "UEPagingID",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0200dc8dd0b7",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 6,
+            "hex_value": "0200dc8dd0b7",
+            "choice": "s-TMSI",
+            "choice_value": 0,
+            "choice_indicator": 2,
+            "choice_indicator_hex": "0x02",
+            "s_tmsi": {
+              "mme_code": 0,
+              "mme_code_hex": "0x00",
+              "m_tmsi": 3700281527,
+              "m_tmsi_hex": "0xdc8dd0b7",
+              "complete_s_tmsi_hex": "00dc8dd0b7",
+              "structure": {
+                "total_length": 5,
+                "mme_code_bytes": "00",
+                "m_tmsi_bytes": "dc8dd0b7"
+              },
+              "wireshark_format": {
+                "mmec": "mMEC: 0 (0x00)",
+                "m_tmsi": "m-TMSI: 3700281527 (0xdc8dd0b7)",
+                "combined": "mMEC: 0 (0x00), m-TMSI: 3700281527 (0xdc8dd0b7)"
+              }
+            },
+            "wireshark_format": {
+              "choice_display": "s-TMSI (0)",
+              "mmec": "mMEC: 0 (0x00)",
+              "m_tmsi": "m-TMSI: 3700281527 (0xdc8dd0b7)",
+              "complete": "s-TMSI (0)"
+            }
+          },
+          "debug_info": {
+            "position": 9,
+            "criticality_byte": "0x40",
+            "value_start": 13,
+            "value_end": 19
+          }
+        },
+        {
+          "id": 109,
+          "name": "CNDomain",
+          "criticality": "ignore",
+          "length": 1,
+          "value_hex": "00",
+          "analyzed_content": {
+            "value": 0,
+            "hex_value": "0x00",
+            "length": 1,
+            "name": "ps",
+            "domain_name": "ps",
+            "description": "Packet Switched Domain",
+            "wireshark_format": {
+              "value": 0,
+              "name": "ps",
+              "description": "Packet Switched Domain"
+            }
+          },
+          "debug_info": {
+            "position": 19,
+            "criticality_byte": "0x40",
+            "value_start": 23,
+            "value_end": 24
+          }
+        },
+        {
+          "id": 46,
+          "name": "TAIList",
+          "criticality": "ignore",
+          "length": 11,
+          "value_hex": "00002f40060006f510d86a",
+          "analyzed_content": {
+            "tai_count": 1,
+            "tai_list": [
+              {
+                "plmn": {
+                  "mcc": "605",
+                  "mnc": "01",
+                  "plmn_id": "605-01",
+                  "operator": "Orange Tunisia"
+                },
+                "tac": 55402,
+                "tac_hex": "0xd86a",
+                "tai_hex": "06f510d86a"
+              }
+            ],
+            "total_elements": 1,
+            "optimization": "pattern_recognition_used"
+          },
+          "debug_info": {
+            "position": 24,
+            "criticality_byte": "0x40",
+            "value_start": 28,
+            "value_end": 39
+          }
+        },
+        {
+          "id": 231,
+          "name": "extended-UEIdentityIndexValue",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "9c94",
+          "analyzed_content": {
+            "bits": "1001110010010100",
+            "length_bits": 16,
+            "length_bytes": 2,
+            "hex_value": "9c94",
+            "extended_ue_identity_index_value": 10021,
+            "decimal_value": 10021,
+            "bit_length": 14,
+            "pad_bits": 2,
+            "actual_bits": "10011100100101",
+            "padding_bits": "00",
+            "paging_optimization": true,
+            "wireshark_format": {
+              "display": "[bit length 14, 2 LSB pad bits, 1001 1100 1001 01.. decimal value 10021]",
+              "bit_string": "1001110010010100",
+              "bit_length_desc": "bit length 14",
+              "pad_bits_desc": "2 LSB pad bits",
+              "decimal_desc": "decimal value 10021",
+              "formatted_bits": "1001 1100 1001 01..",
+              "binary": "10011100100101"
+            },
+            "expected_bit_length": 14,
+            "actual_bit_length": 14,
+            "significant_bits": "10011100100101"
+          },
+          "debug_info": {
+            "position": 39,
+            "criticality_byte": "0x40",
+            "value_start": 43,
+            "value_end": 45
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "mobility",
+          "impact": "low",
+          "notes": [
+            "Paging request for UE location"
+          ]
+        }
+      }
+    },
+    {
+      "packet_number": 46,
+      "timestamp": 1737102645.014459,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "UEContextRelease",
+        "code": 23,
+        "type": "InitiatingMessage",
+        "criticality": "reject"
+      },
+      "size": {
+        "raw_bytes": 25,
+        "ies_count": 2
+      },
+      "ies": [
+        {
+          "id": 99,
+          "name": "UE-S1AP-IDs",
+          "criticality": "reject",
+          "length": 8,
+          "value_hex": "0852b4a5800d3170",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 8,
+            "hex_value": "0852b4a5800d3170"
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 15
+          }
+        },
+        {
+          "id": 2,
+          "name": "Cause",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "0060",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 2,
+            "hex_value": "0060"
+          },
+          "debug_info": {
+            "position": 15,
+            "criticality_byte": "0x40",
+            "value_start": 19,
+            "value_end": 21
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": null,
+          "enb_ue_s1ap_id": null
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 47,
+      "timestamp": 1737102645.014469,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "CellTrafficTrace",
+        "code": 42,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 58,
+        "ies_count": 5
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "c00a00d65f",
+          "analyzed_content": {
+            "value": 167827039,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "0a00d65f",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 167827039,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "8021469d",
+          "analyzed_content": {
+            "value": 2180765,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 2180765,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x00",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 86,
+          "name": "E-UTRAN-Trace-ID",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "06f510001000a545",
+          "analyzed_content": {
+            "length": 8,
+            "hex_value": "06f510001000a545",
+            "trace_id": {
+              "total_length": 8,
+              "hex_value": "06f510001000a545",
+              "plmn_identity": {
+                "mcc": 605,
+                "mnc": 1,
+                "mnc_digits": 2,
+                "plmn_hex": "06f510",
+                "readable": "605-01",
+                "bcd_breakdown": {
+                  "mcc_digits": [
+                    6,
+                    0,
+                    5
+                  ],
+                  "mnc_digits": [
+                    0,
+                    1
+                  ]
+                }
+              },
+              "trace_id": {
+                "value": 4096,
+                "hex": "0x001000",
+                "bytes": "001000"
+              },
+              "trace_recording_session_reference": {
+                "value": 42309,
+                "hex": "0xa545",
+                "bytes": "a545"
+              },
+              "wireshark_format": {
+                "plmn_identity": "605-01",
+                "mobile_country_code": "Tunisia (605)",
+                "mobile_network_code": "Orange (01)",
+                "trace_id": "0x001000",
+                "trace_recording_session_reference": "0xa545"
+              },
+              "network_info": {
+                "country": "Tunisia",
+                "operator": "Orange",
+                "iso_code": "TN",
+                "country_code": "216",
+                "source": "mcc_mnc_table_exact",
+                "mcc_mnc": "605-01",
+                "lookup_method": "exact_match_mnc_01"
+              }
+            }
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x40",
+            "value_start": 24,
+            "value_end": 32
+          }
+        },
+        {
+          "id": 100,
+          "name": "EUTRAN-CGI",
+          "criticality": "ignore",
+          "length": 8,
+          "value_hex": "0006f51001000050",
+          "analyzed_content": {
+            "plmn": {
+              "mcc": "605",
+              "mnc": "01",
+              "plmn_id": "605-01",
+              "operator": "Orange Tunisia"
+            },
+            "cell_id": 16777296,
+            "cell_id_hex": "0x1000050",
+            "enb_id": 65536,
+            "enb_id_hex": "0x10000",
+            "cell_identity": 80,
+            "cgi_string": "605-01-10000-50",
+            "network_info": {
+              "operator": "Orange Tunisia",
+              "enb_type": "Unknown"
+            }
+          },
+          "debug_info": {
+            "position": 32,
+            "criticality_byte": "0x40",
+            "value_start": 36,
+            "value_end": 44
+          }
+        },
+        {
+          "id": 131,
+          "name": "TraceCollectionEntityIPAddress",
+          "criticality": "ignore",
+          "length": 6,
+          "value_hex": "0f800a081914",
+          "analyzed_content": {
+            "bits": "000011111000000000001010000010000001100100010100",
+            "length_bits": 48,
+            "length_bytes": 6,
+            "hex_value": "0f800a081914"
+          },
+          "debug_info": {
+            "position": 44,
+            "criticality_byte": "0x40",
+            "value_start": 48,
+            "value_end": 54
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 167827039,
+          "enb_ue_s1ap_id": 2180765
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    },
+    {
+      "packet_number": 48,
+      "timestamp": 1737102645.014469,
+      "timestamp_human": "2025-01-17 09:30:45.014",
+      "procedure": {
+        "name": "UEContextReleaseRequest",
+        "code": 18,
+        "type": "InitiatingMessage",
+        "criticality": "ignore"
+      },
+      "size": {
+        "raw_bytes": 30,
+        "ies_count": 3
+      },
+      "ies": [
+        {
+          "id": 0,
+          "name": "MME-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 5,
+          "value_hex": "c00101286d",
+          "analyzed_content": {
+            "value": 16853101,
+            "length": 5,
+            "per_encoding": "length_indicator_skipped",
+            "decoded_bytes": "0101286d",
+            "in_range": true,
+            "session_tracking": {
+              "mme_ue_s1ap_id": 16853101,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 3,
+            "criticality_byte": "0x00",
+            "value_start": 7,
+            "value_end": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "eNB-UE-S1AP-ID",
+          "criticality": "reject",
+          "length": 4,
+          "value_hex": "8014bfa6",
+          "analyzed_content": {
+            "value": 1359782,
+            "length": 4,
+            "per_encoding": "msb_masked",
+            "original_first_byte": "0x80",
+            "masked_first_byte": "0x00",
+            "in_range": true,
+            "session_tracking": {
+              "enb_ue_s1ap_id": 1359782,
+              "session_management": true,
+              "tracking_capability": "high"
+            }
+          },
+          "debug_info": {
+            "position": 12,
+            "criticality_byte": "0x00",
+            "value_start": 16,
+            "value_end": 20
+          }
+        },
+        {
+          "id": 2,
+          "name": "Cause",
+          "criticality": "ignore",
+          "length": 2,
+          "value_hex": "0280",
+          "analyzed_content": {
+            "type": "choice",
+            "length": 2,
+            "hex_value": "0280"
+          },
+          "debug_info": {
+            "position": 20,
+            "criticality_byte": "0x40",
+            "value_start": 24,
+            "value_end": 26
+          }
+        }
+      ],
+      "analysis": {
+        "has_errors": false,
+        "error_count": 0,
+        "session_ids": {
+          "mme_ue_s1ap_id": 16853101,
+          "enb_ue_s1ap_id": 1359782
+        },
+        "business_context": {
+          "category": "signaling",
+          "impact": "normal",
+          "notes": []
+        }
+      }
+    }
+  ],
+  "statistics": {
+    "procedures_distribution": {
+      "CellTrafficTrace": 5,
+      "Paging": 16,
+      "downlinkNASTransport": 3,
+      "InitialContextSetup": 5,
+      "UEContextRelease": 3,
+      "initialUEMessage": 2,
+      "UEContextReleaseRequest": 1
+    },
+    "ies_distribution": {
+      "MME-UE-S1AP-ID": 14,
+      "eNB-UE-S1AP-ID": 16,
+      "E-UTRAN-Trace-ID": 5,
+      "EUTRAN-CGI": 7,
+      "TraceCollectionEntityIPAddress": 5,
+      "UEIdentityIndexValue": 16,
+      "UEPagingID": 16,
+      "CNDomain": 16,
+      "TAIList": 16,
+      "extended-UEIdentityIndexValue": 16,
+      "NAS-PDU": 5,
+      "pagingDRX": 1,
+      "E-RABSetupListCtxtSURes": 3,
+      "TAI": 2,
+      "RRC-Establishment-Cause": 2,
+      "S-TMSI": 2,
+      "Unknown-62976": 1,
+      "Unknown-2048": 2,
+      "Unknown-4112": 1,
+      "Unknown-16512": 1,
+      "Unknown-45657": 1,
+      "Unknown-62720": 1,
+      "Unknown-40731": 1,
+      "SRVCCOperationPossible": 1,
+      "Masked-IMEISV": 1,
+      "UE-S1AP-IDs": 1,
+      "Cause": 2
+    },
+    "error_distribution": {
+      "IE parsing failed at position 146: IE value extends beyond data (need 127 bytes)": 1,
+      "IE parsing failed at position 150: IE value extends beyond data (need 117 bytes)": 1,
+      "IE parsing failed at position 205: IE value extends beyond data (need 50 bytes)": 1
+    },
+    "temporal_analysis": {
+      "09:00": {
+        "total_messages": 35,
+        "procedures": {
+          "CellTrafficTrace": 5,
+          "Paging": 16,
+          "downlinkNASTransport": 3,
+          "InitialContextSetup": 5,
+          "UEContextRelease": 3,
+          "initialUEMessage": 2,
+          "UEContextReleaseRequest": 1
+        }
+      }
+    },
+    "business_insights": {
+      "call_patterns": {
+        "most_common_procedure": "Paging",
+        "attach_attempts": 0,
+        "handover_attempts": 0,
+        "paging_requests": 16,
+        "bearer_setups": 0
+      },
+      "network_load": {
+        "peak_hour": "09:00",
+        "peak_messages": 35,
+        "total_hours_analyzed": 1
+      }
+    }
+  },
+  "validation": {
+    "wireshark_filters": [
+      {
+        "name": "All S1AP Messages",
+        "filter": "s1ap",
+        "description": "Display all S1AP protocol messages"
+      },
+      {
+        "name": "S1AP CellTrafficTrace",
+        "filter": "s1ap.procedureCode == 42",
+        "description": "Filter for CellTrafficTrace procedures"
+      },
+      {
+        "name": "S1AP Paging",
+        "filter": "s1ap.procedureCode == 42",
+        "description": "Filter for Paging procedures"
+      },
+      {
+        "name": "S1AP downlinkNASTransport",
+        "filter": "s1ap.procedureCode == 42",
+        "description": "Filter for downlinkNASTransport procedures"
+      },
+      {
+        "name": "S1AP with Errors",
+        "filter": "s1ap and (tcp.analysis.flags or sctp.chunk_flags_data_e or s1ap.unsuccessfulOutcome)",
+        "description": "Messages that might have parsing issues"
+      }
+    ],
+    "verification_notes": [
+      "Compare packet counts between this analysis and Wireshark's Statistics → Protocol Hierarchy",
+      "Verify procedure codes match between decoded messages and Wireshark's S1AP dissector",
+      "Cross-check IE presence and values with Wireshark's packet details pane",
+      "Expected S1AP message count in Wireshark: should match s1ap_messages in summary",
+      "Use 'Statistics → Conversations' to verify SCTP streams contain S1AP data"
+    ],
+    "conformance_check": {
+      "asn1_per_compliant": true,
+      "3gpp_ts_36413_version": "V18.3.0",
+      "wireshark_version_tested": "4.0+",
+      "validation_timestamp": "2025-07-09T11:08:25.401628"
+    }
+  }
+}
